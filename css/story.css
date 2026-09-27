@@ -1106,3 +1106,60 @@
 
   -webkit-user-drag: none;
 }
+/* ==========================================
+   ULTRA SMOOTH STORY ENTRANCE
+   ========================================== */
+
+.story-page {
+  transition:
+    background-color 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.story-page .story-laptop {
+  transition:
+    opacity 1s ease,
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1s ease,
+    background-color 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* Main에서 넘어온 첫 순간 */
+.story-page.story-entering {
+  background-color: #e9eaeb !important;
+}
+
+
+.story-page.story-entering .story-laptop {
+  opacity: 0.25;
+
+  transform: scale(0.985);
+
+  filter: blur(3px);
+
+  background-color: rgba(239, 240, 241, 0.96) !important;
+}
+
+
+
+
+
+
+/* 카드가 평소 상태로 돌아오는 속도 */
+.story-page .story-card {
+  transition:
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.85s ease,
+    filter 0.8s ease,
+    box-shadow 0.8s ease;
+}
+/* ==========================================
+   STORY INITIAL CAROUSEL POSITION FIX
+   ========================================== */
+
+/* Story가 처음 등장하는 동안에는
+   카드 줄의 좌우 이동 애니메이션을 끔 */
+.story-page.story-entering .carousel-track {
+  transition: none !important;
+}

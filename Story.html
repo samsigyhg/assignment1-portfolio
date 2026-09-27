@@ -318,6 +318,82 @@
 
   <script src="js/script.js"></script>
 <script src="js/script.js"></script>
+<script>
+ <script>
+  const cameFromMain =
+    sessionStorage.getItem("fromMain");
+
+  if (cameFromMain === "true") {
+
+    /* 1. 먼저 Story를 입장 상태로 만듦 */
+    document.body.classList.add(
+      "story-entering"
+    );
+
+
+    /* 2. Carousel을 애니메이션 없이
+          처음부터 정확한 중앙 위치에 배치 */
+    const storyTrack =
+      document.getElementById("carousel-track");
+
+    if (storyTrack) {
+
+      storyTrack.style.transition =
+        "none";
+
+      /*
+        script.js에 있는 updateCarousel()을
+        즉시 실행해서 ABOUT을 중앙에 배치
+      */
+      if (
+        typeof updateCarousel ===
+        "function"
+      ) {
+        updateCarousel();
+      }
+
+    }
+
+
+    sessionStorage.removeItem(
+      "fromMain"
+    );
+
+
+    /*
+      3. 브라우저가 중앙 위치를 먼저 그린 뒤
+         입장 애니메이션 시작
+    */
+    requestAnimationFrame(function () {
+
+      requestAnimationFrame(function () {
+
+        setTimeout(function () {
+
+          document.body.classList.remove(
+            "story-entering"
+          );
+
+
+          /*
+            4. 입장이 끝난 뒤
+               Carousel 이동 애니메이션 복구
+          */
+          if (storyTrack) {
+
+            storyTrack.style.transition =
+              "transform 0.72s cubic-bezier(0.22, 1, 0.36, 1)";
+
+          }
+
+        }, 120);
+
+      });
+
+    });
+
+  }
+</script>
 
 <script>
   function updateStoryKoreaDateTime() {

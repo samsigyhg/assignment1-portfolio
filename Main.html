@@ -172,14 +172,14 @@
         </p>
 
 
-        <a
-          href="Story.html"
-          class="explore-btn"
-        >
-          EXPLORE MY STORY
-          <span>→</span>
-        </a>
-
+       <a
+  href="Story.html"
+  class="explore-btn"
+  id="explore-story"
+>
+  EXPLORE MY STORY
+  <span>→</span>
+</a> 
       </div>
 
 
@@ -278,6 +278,56 @@
     document.getElementById("hand-line-2"),
     nextLetterIndex
   );
+</script>
+<script>
+  const exploreStoryButton =
+    document.getElementById("explore-story");
+
+  if (exploreStoryButton) {
+
+    exploreStoryButton.addEventListener(
+      "click",
+      function (event) {
+
+        /* Ctrl 클릭 / 새 탭 열기는 방해하지 않음 */
+        if (
+          event.ctrlKey ||
+          event.metaKey ||
+          event.shiftKey ||
+          event.altKey
+        ) {
+          return;
+        }
+
+        event.preventDefault();
+
+        const destination =
+          exploreStoryButton.href;
+
+        document.body.classList.add(
+          "is-leaving"
+        );
+
+        /*
+          Story에서
+          Main에서 넘어왔다는 것을 알기 위해 저장
+        */
+        sessionStorage.setItem(
+          "fromMain",
+          "true"
+        );
+
+        setTimeout(function () {
+
+          window.location.href =
+            destination;
+
+        }, 680);
+
+      }
+    );
+
+  }
 </script>
 </body>
 

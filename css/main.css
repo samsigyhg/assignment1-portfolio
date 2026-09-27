@@ -1578,3 +1578,93 @@
   filter:
     blur(8px);
 }
+/* ==================================================
+   MAIN -> STORY PAGE TRANSITION
+   ================================================== */
+
+
+/* Hero가 확대될 때 기준점 */
+.main-page .hero {
+  transform-origin: center center;
+
+  transition:
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.72s ease,
+    opacity 0.62s ease;
+}
+
+
+/* Navigation도 자연스럽게 사라짐 */
+.main-page .main-nav {
+  transition:
+    opacity 0.45s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* macOS bar */
+.main-page .mac-bar {
+  transition:
+    opacity 0.45s ease;
+}
+
+
+/* 클릭 후 Hero 확대 + blur */
+.main-page.is-leaving .hero {
+  transform: scale(1.035);
+
+  filter:
+    blur(6px)
+    brightness(1.12);
+
+  opacity: 0.12;
+}
+
+
+/* 메뉴는 위로 아주 살짝 사라짐 */
+.main-page.is-leaving .main-nav {
+  opacity: 0;
+
+  transform:
+    translateY(-6px);
+}
+
+
+/* macOS bar도 약하게 fade */
+.main-page.is-leaving .mac-bar {
+  opacity: 0.35;
+}
+
+
+/* 전환 중 버튼 재클릭 방지 */
+.main-page.is-leaving .explore-btn {
+  pointer-events: none;
+}
+
+
+/* 밝은 화면 전환 */
+.main-page .laptop::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background: #ffffff;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 100;
+
+  transition:
+    opacity 0.65s ease;
+}
+
+
+.main-page.is-leaving .laptop::after {
+  opacity: 0.38;
+}

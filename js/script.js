@@ -190,12 +190,30 @@ dots.forEach(
 );
 
 
-/* 처음 화면 */
+/* ==========================================
+   처음 화면 - ABOUT 카드 즉시 중앙 배치
+   ========================================== */
 
-window.addEventListener(
-  "load",
-  updateCarousel
-);
+/* 처음에는 이동 애니메이션을 끔 */
+track.style.transition = "none";
+
+/* ABOUT 카드를 바로 중앙으로 계산 */
+updateCarousel();
+
+/* 계산된 위치를 브라우저에 즉시 적용 */
+track.getBoundingClientRect();
+
+/* 그 다음부터만 정상 슬라이드 애니메이션 사용 */
+requestAnimationFrame(function () {
+
+  requestAnimationFrame(function () {
+
+    track.style.transition =
+      "transform 0.72s cubic-bezier(0.22, 1, 0.36, 1)";
+
+  });
+
+});
 
 
 /* 화면 크기가 바뀔 때 */
