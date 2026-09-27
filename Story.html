@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Story</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="story-page">
+
+  <div class="story-laptop">
+
+    <!-- macOS 상단 메뉴 -->
+    <div class="story-mac-bar">
+
+      <div class="story-mac-left">
+        <span>●</span>
+        <span>●</span>
+        <span>●</span>
+
+        <span class="story-menu-text">Finder</span>
+        <span class="story-menu-text">File</span>
+        <span class="story-menu-text">Edit</span>
+        <span class="story-menu-text">View</span>
+        <span class="story-menu-text">Go</span>
+      </div>
+
+      <div class="story-mac-right">
+        <span>10:24 AM</span>
+      </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+    <header class="story-nav">
+
+      <a href="Main.html" class="story-logo">
+        JM
+      </a>
+
+      <nav>
+        <a href="About.html">ABOUT</a>
+        <a href="Campus.html">CAMPUS</a>
+        <a href="Future.html">FUTURE</a>
+        <a href="Gallery.html">GALLERY</a>
+      </nav>
+
+    </header>
+
+
+
+    <!-- 카드 영역 -->
+    <main class="story-content">
+
+      <!-- 왼쪽 버튼 -->
+      <button
+        class="carousel-btn prev-btn"
+        id="prev-btn"
+        aria-label="Previous card"
+      >
+        ‹
+      </button>
+
+
+      <!-- 카드들을 감싸는 영역 -->
+      <div class="carousel-viewport">
+
+        <div class="carousel-track" id="carousel-track">
+
+
+          <!-- 01 ABOUT -->
+          <article
+            class="story-card about-card"
+            data-theme="#eee8ff"
+          >
+
+            <span class="card-number">
+              01
+            </span>
+
+            <h2>
+              About<br>
+              Me
+            </h2>
+
+            <p>
+              나에 대한 이야기와
+              나의 강점, 개선하고 싶은 점
+            </p>
+
+            <div class="card-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+                alt="About me"
+              >
+
+            </div>
+
+            <a
+              href="About.html"
+              class="more-btn"
+            >
+              MORE
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+
+          <!-- 02 CAMPUS -->
+          <article
+            class="story-card campus-card"
+            data-theme="#e4f1df"
+          >
+
+            <span class="card-number">
+              02
+            </span>
+
+            <h2>
+              Campus<br>
+              Life
+            </h2>
+
+            <p>
+              대학생활과
+              도전하고 싶은 일
+            </p>
+
+            <div class="card-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1564981797816-1043664bf78d"
+                alt="Campus life"
+              >
+
+            </div>
+
+            <a
+              href="Campus.html"
+              class="more-btn"
+            >
+              MORE
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+
+          <!-- 03 FUTURE -->
+          <article
+            class="story-card future-card"
+            data-theme="#ffe5d6"
+          >
+
+            <span class="card-number">
+              03
+            </span>
+
+            <h2>
+              Future
+            </h2>
+
+            <p>
+              졸업 후 하고 싶은 일과
+              앞으로의 목표
+            </p>
+
+            <div class="card-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+                alt="Future"
+              >
+
+            </div>
+
+            <a
+              href="Future.html"
+              class="more-btn"
+            >
+              MORE
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+
+          <!-- 04 GALLERY -->
+          <article
+            class="story-card gallery-card"
+            data-theme="#e1ecff"
+          >
+
+            <span class="card-number">
+              04
+            </span>
+
+            <h2>
+              Gallery
+            </h2>
+
+            <p>
+              사진으로 기록한
+              나의 순간과 관심사
+            </p>
+
+            <div class="card-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131"
+                alt="Gallery"
+              >
+
+            </div>
+
+            <a
+              href="Gallery.html"
+              class="more-btn"
+            >
+              MORE
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- 오른쪽 버튼 -->
+      <button
+        class="carousel-btn next-btn"
+        id="next-btn"
+        aria-label="Next card"
+      >
+        ›
+      </button>
+
+    </main>
+
+
+
+    <!-- 현재 카드 표시 -->
+    <div class="carousel-dots">
+
+      <button
+        class="dot active"
+        data-index="0"
+      ></button>
+
+      <button
+        class="dot"
+        data-index="1"
+      ></button>
+
+      <button
+        class="dot"
+        data-index="2"
+      ></button>
+
+      <button
+        class="dot"
+        data-index="3"
+      ></button>
+
+    </div>
+
+
+    <p class="story-guide">
+      SCROLL OR DRAG TO EXPLORE
+    </p>
+
+  </div>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
