@@ -264,142 +264,152 @@ window.addEventListener(
 /* ==========================================
    MOUSE DRAG
    ========================================== */
+/* ==========================================
+   REAL-TIME DRAG CAROUSEL
+   ========================================== */
 
 const carouselViewport =
-  document.querySelector(
-    ".carousel-viewport"
-  );
-
-
-let dragStartX = 0;
-
-let dragEndX = 0;
+  document.querySelector(".carousel-viewport");
 
 let isDragging = false;
+let dragStartX = 0;
+let currentDragX = 0;
 
 
-/* 마우스를 눌렀을 때 */
+/* 현재 카드의 기본 위치 계산 */
+function getBaseTranslateX() {
 
+  const cardWidth = 330;
+  const gap = 24;
+
+  const move =
+    currentIndex *
+    (cardWidth + gap);
+
+  const viewportWidth =
+    carouselViewport.offsetWidth;
+
+  const centerOffset =
+    viewportWidth / 2 -
+    cardWidth / 2;
+
+  return centerOffset - move;
+}
+
+
+/* 드래그 시작 */
 carouselViewport.addEventListener(
   "pointerdown",
-  function(event) {
-
-    /*
-      MORE 버튼이나 다른 버튼을 누른 경우에는
-      drag를 시작하지 않음
-    */
+  function (event) {
 
     if (
-      event.target.closest(
-        "a, button"
-      )
+      event.target.closest("a") ||
+      event.target.closest("button")
     ) {
       return;
     }
 
-
     isDragging = true;
 
-    dragStartX =
-      event.clientX;
-
+    dragStartX = event.clientX;
+    currentDragX = 0;
 
     carouselViewport.classList.add(
       "dragging"
     );
 
+    /* 잡는 동안 transition 제거 */
+    track.style.transition = "none";
+
+    carouselViewport.setPointerCapture(
+      event.pointerId
+    );
   }
 );
 
 
-/* 마우스를 움직일 때 */
-
+/* 실제 마우스를 따라 이동 */
 carouselViewport.addEventListener(
   "pointermove",
-  function(event) {
+  function (event) {
 
-    if (!isDragging) {
-      return;
-    }
+    if (!isDragging) return;
 
+    currentDragX =
+      event.clientX - dragStartX;
 
-    dragEndX =
-      event.clientX;
+    const baseX =
+      getBaseTranslateX();
 
+    /*
+      너무 멀리 끌리는 느낌을 줄이기 위해
+      0.85 정도만 따라오도록 설정
+    */
+    const dragOffset =
+      currentDragX * 0.85;
+
+    track.style.transform =
+      `translateX(${baseX + dragOffset}px)`;
   }
 );
 
 
-/* 마우스를 놓았을 때 */
-
+/* 드래그 종료 */
 carouselViewport.addEventListener(
   "pointerup",
-  function(event) {
+  function () {
 
-    if (!isDragging) {
-      return;
-    }
+    if (!isDragging) return;
 
+    isDragging = false;
 
-    dragEndX =
-      event.clientX;
+    carouselViewport.classList.remove(
+      "dragging"
+    );
 
-
-    const dragDistance =
-      dragEndX - dragStartX;
+    /*
+      다시 부드러운 transition 활성화
+    */
+    track.style.transition =
+      "transform 0.72s cubic-bezier(0.22, 1, 0.36, 1)";
 
 
     /*
-      왼쪽으로 60px 이상 drag
-      → 다음 카드
+      70px 이상 끌면 카드 변경
     */
-
     if (
-      dragDistance < -60
-      &&
+      currentDragX < -70 &&
       currentIndex < cards.length - 1
     ) {
 
       currentIndex++;
 
-    }
-
-
-    /*
-      오른쪽으로 60px 이상 drag
-      → 이전 카드
-    */
-
-    else if (
-      dragDistance > 60
-      &&
+    } else if (
+      currentDragX > 70 &&
       currentIndex > 0
     ) {
 
       currentIndex--;
-
     }
 
 
+    /*
+      새 카드 중앙으로 Snap
+      조금만 끌었다면 기존 위치로 복귀
+    */
     updateCarousel();
 
-
-    isDragging = false;
-
-
-    carouselViewport.classList.remove(
-      "dragging"
-    );
-
+    currentDragX = 0;
   }
 );
 
 
-/* 화면 밖에서 마우스를 놓는 경우 */
-
+/* 드래그가 강제로 취소된 경우 */
 carouselViewport.addEventListener(
   "pointercancel",
-  function() {
+  function () {
+
+    if (!isDragging) return;
 
     isDragging = false;
 
@@ -407,5 +417,11 @@ carouselViewport.addEventListener(
       "dragging"
     );
 
+    track.style.transition =
+      "transform 0.72s cubic-bezier(0.22, 1, 0.36, 1)";
+
+    updateCarousel();
+
+    currentDragX = 0;
   }
 );

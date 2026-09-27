@@ -1080,3 +1080,29 @@
     background-color 0.85s
     cubic-bezier(0.22, 1, 0.36, 1);
 }
+/* ==========================================
+   REAL-TIME DRAG FEEL
+   ========================================== */
+
+.story-page .carousel-viewport {
+  cursor: grab;
+
+  user-select: none;
+
+  touch-action: pan-y;
+}
+
+
+.story-page .carousel-viewport.dragging {
+  cursor: grabbing;
+}
+
+
+/* 드래그할 때 이미지가 선택되는 것 방지 */
+.story-page .story-card img {
+  pointer-events: none;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
