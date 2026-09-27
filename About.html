@@ -100,157 +100,124 @@
 
 
     <!-- Main -->
-    <main class="about-detail-content">
+    <main class="about-dashboard">
 
-      <!-- Intro -->
-      <section class="about-intro">
+  <!-- 왼쪽 자기소개 -->
+  <section class="about-home">
 
-        <div class="about-intro-text">
+    <span class="about-number">
+      01
+    </span>
 
-          <span class="detail-number">
-            01
-          </span>
+    <h1>
+      About<br>
+      Me.
+    </h1>
 
-          <h1>
-            About<br>
-            Me.
-          </h1>
+    <p class="about-summary">
+      안녕하세요.
+      새로운 경험을 통해 배우고
+      다양한 분야에 도전하며 성장하고 싶은
+      대학생 Hangyeol입니다.
+    </p>
 
-          <p class="about-description">
-            안녕하세요. 새로운 경험을 통해 배우고,
-            다양한 분야에 도전하는 것을 좋아하는 대학생입니다.
-            현재는 대학생활을 통해 제가 잘하는 것과
-            앞으로 발전시키고 싶은 부분을 찾아가고 있습니다.
-          </p>
+    <p class="about-hint">
+      SELECT A CATEGORY →
+    </p>
 
-        </div>
-
-
-        <!-- 임시 이미지 -->
-        <div class="about-photo">
-
-          <img
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
-            alt="My profile photo"
-          >
-
-        </div>
-
-      </section>
+  </section>
 
 
-      <!-- Strength / Improvement -->
-      <section class="about-grid">
+  <!-- 오른쪽 Desktop 아이콘 -->
+  <div class="about-apps">
+
+    <button
+      class="about-app"
+      data-panel="strengths">
+
+      <span class="app-icon">
+        ★
+      </span>
+
+      <span>
+        Strengths
+      </span>
+
+    </button>
 
 
-        <!-- Strength -->
-        <div class="about-section strength-section">
+    <button
+      class="about-app"
+      data-panel="improve">
 
-          <p class="section-label">
-            MY STRENGTHS
-          </p>
+      <span class="app-icon">
+        ↗
+      </span>
 
-          <div class="about-item">
+      <span>
+        Improve
+      </span>
 
-            <span>
-              01
-            </span>
-
-            <h2>
-              Curiosity
-            </h2>
-
-            <p>
-              새로운 분야나 기술에 관심이 생기면
-              직접 찾아보고 경험해 보려고 합니다.
-            </p>
-
-          </div>
+    </button>
 
 
-          <div class="about-item">
+    <button
+      class="about-app"
+      data-panel="timeline">
 
-            <span>
-              02
-            </span>
+      <span class="app-icon">
+        ▣
+      </span>
 
-            <h2>
-              Adaptability
-            </h2>
+      <span>
+        Timeline
+      </span>
 
-            <p>
-              새로운 환경이나 상황에서도
-              빠르게 적응하고 배우려고 노력합니다.
-            </p>
-
-          </div>
-
-        </div>
+    </button>
 
 
+    <button
+      class="about-app"
+      data-panel="likes">
 
-        <!-- Improve -->
-        <div class="about-section improve-section">
+      <span class="app-icon">
+        ♥
+      </span>
 
-          <p class="section-label">
-            TO IMPROVE
-          </p>
+      <span>
+        Likes
+      </span>
 
-          <div class="about-item">
-
-            <span>
-              01
-            </span>
-
-            <h2>
-              Execution
-            </h2>
-
-            <p>
-              완벽하게 준비한 뒤 시작하려 하기보다
-              먼저 실행하고 점차 개선하는 습관을
-              기르고 싶습니다.
-            </p>
-
-          </div>
+    </button>
 
 
-          <div class="about-item">
+    <button
+      class="about-app"
+      data-panel="dislikes">
 
-            <span>
-              02
-            </span>
+      <span class="app-icon">
+        −
+      </span>
 
-            <h2>
-              Time Management
-            </h2>
+      <span>
+        Dislikes
+      </span>
 
-            <p>
-              해야 할 일을 우선순위에 따라 정리하고
-              시간을 더욱 효율적으로 사용하는 능력을
-              발전시키고 싶습니다.
-            </p>
+    </button>
 
-          </div>
-
-        </div>
-
-      </section>
+  </div>
 
 
-      <!-- Back -->
-      <div class="back-area">
+  <!--
+    클릭할 때 만들어지는
+    여러 Mac Window가 들어가는 공간
+  -->
+  <div
+    class="about-window-layer"
+    id="about-window-layer">
+  </div>
 
-        <a
-          href="Story.html"
-          class="back-btn"
-        >
-          ← BACK TO STORY
-        </a>
-
-      </div>
-
-    </main>
+</main>
 
   </div>
 <script>
@@ -314,6 +281,686 @@
     updateDetailKoreaDateTime,
     30000
   );
+
+</script>
+<script>
+
+/* ==========================================
+   ABOUT MULTI WINDOW SYSTEM
+   ========================================== */
+
+const aboutWindowLayer =
+  document.getElementById(
+    "about-window-layer"
+  );
+
+const aboutAppButtons =
+  document.querySelectorAll(
+    ".about-app"
+  );
+
+
+let highestWindowZ = 50;
+
+let openedWindowCount = 0;
+
+
+/* ==========================================
+   각 팝업에 들어갈 내용
+   ========================================== */
+
+const aboutData = {
+
+  strengths: {
+
+    title: "My Strengths",
+
+    description:
+      "Things I believe I do well.",
+
+    items: [
+
+      [
+        "01",
+        "Curiosity",
+        "새로운 것을 배우고 직접 경험해보는 것을 좋아합니다."
+      ],
+
+      [
+        "02",
+        "Persistence",
+        "문제가 생겨도 쉽게 포기하지 않고 끝까지 해결하려고 합니다."
+      ],
+
+      [
+        "03",
+        "Adaptability",
+        "새로운 환경과 변화에 빠르게 적응하려고 노력합니다."
+      ]
+
+    ]
+
+  },
+
+
+  improve: {
+
+    title: "To Improve",
+
+    description:
+      "Things I want to develop.",
+
+    items: [
+
+      [
+        "01",
+        "English",
+        "더 자연스럽게 영어로 소통할 수 있는 능력을 키우고 싶습니다."
+      ],
+
+      [
+        "02",
+        "Confidence",
+        "새로운 상황에서도 더 자신 있게 의견을 표현하고 싶습니다."
+      ],
+
+      [
+        "03",
+        "Time Management",
+        "해야 할 일을 더욱 체계적으로 관리하고 싶습니다."
+      ]
+
+    ]
+
+  },
+
+
+  timeline: {
+
+    title: "My Timeline",
+
+    description:
+      "A short history of my life.",
+
+    items: [
+
+      [
+        "01",
+        "Birth",
+        "출생"
+      ],
+
+      [
+        "02",
+        "Elementary School",
+        "초등학교"
+      ],
+
+      [
+        "03",
+        "Middle School",
+        "중학교"
+      ],
+
+      [
+        "04",
+        "High School",
+        "고등학교"
+      ],
+
+      [
+        "05",
+        "University",
+        "현재 대학생활"
+      ]
+
+    ]
+
+  },
+
+
+  likes: {
+
+    title: "Things I Like",
+
+    description:
+      "Things that make me happy.",
+
+    items: [
+
+      [
+        "01",
+        "Music",
+        "좋아하는 음악"
+      ],
+
+      [
+        "02",
+        "Games",
+        "게임"
+      ],
+
+      [
+        "03",
+        "Travel",
+        "새로운 장소를 경험하는 것"
+      ],
+
+      [
+        "04",
+        "Food",
+        "좋아하는 음식"
+      ]
+
+    ]
+
+  },
+
+
+  dislikes: {
+
+    title: "Things I Don't Like",
+
+    description:
+      "Things that are not really for me.",
+
+    items: [
+
+      [
+        "01",
+        "Waiting",
+        "오랫동안 기다리는 것"
+      ],
+
+      [
+        "02",
+        "Routine",
+        "너무 반복적인 일"
+      ],
+
+      [
+        "03",
+        "Giving Up",
+        "도전하지 않고 포기하는 것"
+      ]
+
+    ]
+
+  }
+
+};
+
+
+/* ==========================================
+   클릭한 창을 맨 앞으로 가져오기
+   ========================================== */
+
+function bringAboutWindowToFront(
+  windowElement
+) {
+
+  highestWindowZ++;
+
+  windowElement.style.zIndex =
+    highestWindowZ;
+
+}
+
+
+/* ==========================================
+   팝업 만들기
+   ========================================== */
+
+function createAboutWindow(
+  panelName
+) {
+
+  const data =
+    aboutData[panelName];
+
+
+  if (!data) {
+    return;
+  }
+
+
+  /*
+    같은 팝업이 이미 열려 있으면
+    하나 더 만들지 않고 앞으로 가져옴
+  */
+  const existingWindow =
+    document.querySelector(
+      `.about-window[data-window="${panelName}"]`
+    );
+
+
+  if (existingWindow) {
+
+    bringAboutWindowToFront(
+      existingWindow
+    );
+
+    return;
+  }
+
+
+  const newWindow =
+    document.createElement(
+      "div"
+    );
+
+
+  newWindow.className =
+    "about-window";
+
+
+  newWindow.dataset.window =
+    panelName;
+
+
+  /*
+    여러 창이 완전히 같은 자리에
+    겹치지 않도록 조금씩 이동
+  */
+  const offset =
+    openedWindowCount % 5;
+
+
+  newWindow.style.left =
+    `${155 + offset * 34}px`;
+
+
+  newWindow.style.top =
+    `${85 + offset * 27}px`;
+
+
+  openedWindowCount++;
+
+
+  newWindow.innerHTML = `
+
+    <div class="about-window-bar">
+
+      <div class="window-controls">
+
+       <button
+  class="window-control window-close"
+  aria-label="Close">
+  <span class="close-x">×</span>
+</button>
+
+        <span
+          class="window-control window-minimize">
+        </span>
+
+        <span
+          class="window-control window-maximize">
+        </span>
+
+      </div>
+
+
+      <span class="window-title">
+        ${data.title}
+      </span>
+
+    </div>
+
+
+    <div class="about-window-content">
+
+      <h2>
+        ${data.title}
+      </h2>
+
+      <p class="window-description">
+        ${data.description}
+      </p>
+
+
+      ${data.items.map(
+
+        item => `
+
+          <div class="window-item">
+
+            <span>
+              ${item[0]}
+            </span>
+
+            <h3>
+              ${item[1]}
+            </h3>
+
+            <p>
+              ${item[2]}
+            </p>
+
+          </div>
+
+        `
+
+      ).join("")}
+
+    </div>
+
+  `;
+
+
+  aboutWindowLayer.appendChild(
+    newWindow
+  );
+
+
+  bringAboutWindowToFront(
+    newWindow
+  );
+
+
+  /* 창 클릭 → 맨 앞으로 */
+  newWindow.addEventListener(
+    "pointerdown",
+    function() {
+
+      bringAboutWindowToFront(
+        newWindow
+      );
+
+    }
+  );
+
+
+  /* 빨간색 X */
+  const closeButton =
+  newWindow.querySelector(
+    ".window-close"
+  );
+
+
+closeButton.addEventListener(
+  "click",
+  function(event) {
+
+    event.stopPropagation();
+
+
+    /*
+      닫히는 애니메이션 시작
+    */
+    newWindow.classList.add(
+      "closing"
+    );
+
+
+    /*
+      애니메이션이 끝난 뒤
+      실제 HTML에서 제거
+    */
+    setTimeout(
+      function() {
+
+        newWindow.remove();
+
+      },
+      280
+    );
+
+  }
+);
+
+  makeAboutWindowDraggable(
+    newWindow
+  );
+
+}
+
+
+/* ==========================================
+   WINDOW DRAG
+   ========================================== */
+
+function makeAboutWindowDraggable(
+  windowElement
+) {
+
+  const windowBar =
+    windowElement.querySelector(
+      ".about-window-bar"
+    );
+
+
+  let dragging = false;
+
+  let startX = 0;
+  let startY = 0;
+
+  let startLeft = 0;
+  let startTop = 0;
+
+
+  windowBar.addEventListener(
+    "pointerdown",
+    function(event) {
+
+
+      /*
+        X 버튼에서는
+        드래그 시작 안 함
+      */
+      if (
+        event.target.closest(
+          ".window-close"
+        )
+      ) {
+        return;
+      }
+
+
+      dragging = true;
+
+
+      bringAboutWindowToFront(
+        windowElement
+      );
+
+
+      windowElement.classList.add(
+        "dragging"
+      );
+
+
+      startX =
+        event.clientX;
+
+      startY =
+        event.clientY;
+
+
+      startLeft =
+        windowElement.offsetLeft;
+
+      startTop =
+        windowElement.offsetTop;
+
+
+      windowBar.setPointerCapture(
+        event.pointerId
+      );
+
+    }
+  );
+
+
+  windowBar.addEventListener(
+  "pointermove",
+  function(event) {
+
+    if (!dragging) {
+      return;
+    }
+
+
+    const moveX =
+      event.clientX -
+      startX;
+
+    const moveY =
+      event.clientY -
+      startY;
+
+
+    let newLeft =
+      startLeft + moveX;
+
+    let newTop =
+      startTop + moveY;
+
+
+    const layerWidth =
+      aboutWindowLayer.clientWidth;
+
+    const layerHeight =
+      aboutWindowLayer.clientHeight;
+
+
+    const windowWidth =
+      windowElement.offsetWidth;
+
+    const windowHeight =
+      windowElement.offsetHeight;
+
+
+    /*
+      Mac 느낌:
+      창 대부분은 화면 밖으로 나가도 되지만
+      title bar를 다시 잡을 수 있을 만큼은
+      항상 남겨둔다.
+    */
+
+    const visibleSide = 90;
+
+    const titleBarHeight = 36;
+
+    const bottomVisible = 50;
+
+
+    /*
+      왼쪽 제한
+      창이 왼쪽으로 나가도
+      오른쪽 일부는 반드시 남김
+    */
+    const minLeft =
+      -windowWidth +
+      visibleSide;
+
+
+    /*
+      오른쪽 제한
+      창이 오른쪽으로 나가도
+      왼쪽 일부는 반드시 남김
+    */
+    const maxLeft =
+      layerWidth -
+      visibleSide;
+
+
+    /*
+      위쪽 제한
+      title bar는 절대 위로 사라지지 않게
+    */
+    const minTop = 0;
+
+
+    /*
+      아래쪽 제한
+      창이 아래로 내려가도
+      title bar + 일부는 다시 잡을 수 있게
+    */
+    const maxTop =
+      layerHeight -
+      titleBarHeight -
+      bottomVisible;
+
+
+    newLeft =
+      Math.max(
+        minLeft,
+        Math.min(
+          newLeft,
+          maxLeft
+        )
+      );
+
+
+    newTop =
+      Math.max(
+        minTop,
+        Math.min(
+          newTop,
+          maxTop
+        )
+      );
+
+
+    windowElement.style.left =
+      `${newLeft}px`;
+
+    windowElement.style.top =
+      `${newTop}px`;
+
+  }
+);
+
+  windowBar.addEventListener(
+    "pointerup",
+    function() {
+
+      dragging = false;
+
+      windowElement.classList.remove(
+        "dragging"
+      );
+
+    }
+  );
+
+
+  windowBar.addEventListener(
+    "pointercancel",
+    function() {
+
+      dragging = false;
+
+      windowElement.classList.remove(
+        "dragging"
+      );
+
+    }
+  );
+
+}
+
+
+/* ==========================================
+   RIGHT ICON CLICK
+   ========================================== */
+
+aboutAppButtons.forEach(
+  function(button) {
+
+    button.addEventListener(
+      "click",
+      function() {
+
+        createAboutWindow(
+          button.dataset.panel
+        );
+
+      }
+    );
+
+  }
+);
 
 </script>
 </body>
