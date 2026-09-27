@@ -216,7 +216,14 @@
     class="about-window-layer"
     id="about-window-layer">
   </div>
+<!-- Back to Story -->
+<a href="Story.html" class="back-to-story">
+  <span class="back-arrow">←</span>
 
+  <span class="back-text">
+    BACK TO STORY
+  </span>
+</a>
 </main>
 
   </div>
@@ -589,13 +596,16 @@ function createAboutWindow(
   <span class="close-x">×</span>
 </button>
 
-        <span
-          class="window-control window-minimize">
-        </span>
-
-        <span
-          class="window-control window-maximize">
-        </span>
+       <button
+  type="button"
+  class="window-control window-minimize"
+  aria-label="Minimize">
+</button>
+       <button
+  type="button"
+  class="window-control window-maximize"
+  aria-label="Maximize">
+</button>
 
       </div>
 
@@ -711,7 +721,135 @@ closeButton.addEventListener(
   makeAboutWindowDraggable(
     newWindow
   );
+/* ==========================================
+   MINIMIZE
+   ========================================== */
 
+const minimizeButton =
+  newWindow.querySelector(
+    ".window-minimize"
+  );
+
+
+minimizeButton.addEventListener(
+  "click",
+  function(event) {
+
+    event.stopPropagation();
+
+
+    newWindow.classList.toggle(
+      "minimized"
+    );
+
+
+    bringAboutWindowToFront(
+      newWindow
+    );
+
+  }
+);
+/* ==========================================
+   MAXIMIZE / RESTORE
+   ========================================== */
+
+
+
+const maximizeButton =
+  newWindow.querySelector(
+    ".window-maximize"
+  );
+
+
+maximizeButton.addEventListener(
+  "click",
+  function(event) {
+
+    event.stopPropagation();
+
+
+    /* 이미 최대화 상태라면 원래 위치로 복구 */
+    if (
+      newWindow.classList.contains(
+        "maximized"
+      )
+    ) {
+
+      newWindow.classList.remove(
+        "maximized"
+      );
+
+
+      newWindow.style.left =
+        newWindow.dataset.oldLeft;
+
+      newWindow.style.top =
+        newWindow.dataset.oldTop;
+
+      newWindow.style.width =
+        newWindow.dataset.oldWidth;
+
+      newWindow.style.height =
+        newWindow.dataset.oldHeight;
+
+
+      return;
+
+    }
+
+
+    /*
+      최소화 상태라면
+      먼저 다시 펼침
+    */
+    newWindow.classList.remove(
+      "minimized"
+    );
+
+
+    /*
+      현재 위치 / 크기를 기억
+    */
+    newWindow.dataset.oldLeft =
+      newWindow.style.left;
+
+    newWindow.dataset.oldTop =
+      newWindow.style.top;
+
+    newWindow.dataset.oldWidth =
+      `${newWindow.offsetWidth}px`;
+
+    newWindow.dataset.oldHeight =
+      `${newWindow.offsetHeight}px`;
+
+
+    /*
+      최대화
+    */
+    newWindow.classList.add(
+      "maximized"
+    );
+
+
+    newWindow.style.left =
+      "16px";
+
+    newWindow.style.top =
+      "16px";
+
+    newWindow.style.width =
+      "calc(100% - 32px)";
+
+    newWindow.style.height =
+      "calc(100% - 32px)";
+
+
+    bringAboutWindowToFront(
+      newWindow
+    );
+
+  }
+);
 }
 
 
@@ -748,13 +886,12 @@ function makeAboutWindowDraggable(
         드래그 시작 안 함
       */
       if (
-        event.target.closest(
-          ".window-close"
-        )
-      ) {
-        return;
-      }
-
+  event.target.closest(
+    ".window-control"
+  )
+) {
+  return;
+}
 
       dragging = true;
 
