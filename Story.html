@@ -8,6 +8,7 @@
   <title>My Story</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/story.css">
 </head>
 
 
@@ -15,34 +16,60 @@
 
   <div class="story-laptop">
 
-    <!-- macOS 상단 메뉴 -->
-    <div class="story-mac-bar">
+    <!-- macOS top bar -->
+<div class="story-mac-bar">
 
-      <div class="story-mac-left">
-        <span>●</span>
-        <span>●</span>
-        <span>●</span>
+  <div class="story-mac-left">
 
-        <span class="story-menu-text">Finder</span>
-        <span class="story-menu-text">File</span>
-        <span class="story-menu-text">Edit</span>
-        <span class="story-menu-text">View</span>
-        <span class="story-menu-text">Go</span>
-      </div>
+    <span class="story-apple-mark"></span>
 
-      <div class="story-mac-right">
-        <span>10:24 AM</span>
-      </div>
+    <span class="story-menu-text story-finder">Finder</span>
+    <span class="story-menu-text">File</span>
+    <span class="story-menu-text">Edit</span>
+    <span class="story-menu-text">View</span>
+    <span class="story-menu-text">Go</span>
+    <span class="story-menu-text">Window</span>
+    <span class="story-menu-text">Help</span>
 
-    </div>
+  </div>
 
+
+  <div class="story-mac-right">
+
+  <span class="story-status-item">
+    Wi-Fi
+  </span>
+
+  <span class="story-status-item">
+    <span class="story-battery-shell">
+      <span class="story-battery-level"></span>
+    </span>
+    100%
+  </span>
+
+  <span class="story-status-item story-datetime">
+    <span id="story-korea-date"></span>
+    <span id="story-korea-clock"></span>
+  </span>
+
+</div>
+
+</div>
 
     <!-- Navigation -->
     <header class="story-nav">
 
       <a href="Main.html" class="story-logo">
-        JM
-      </a>
+
+  <span class="story-logo-main">
+    H
+  </span>
+
+  <span class="story-logo-sub">
+    PORTFOLIO
+  </span>
+
+</a>
 
       <nav>
         <a href="About.html">ABOUT</a>
@@ -287,7 +314,52 @@
 
 
   <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 
+<script>
+  function updateStoryKoreaDateTime() {
+
+    const now = new Date();
+
+    const koreaDate = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Seoul",
+      weekday: "short",
+      month: "short",
+      day: "numeric"
+    }).format(now);
+
+    const koreaTime = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Seoul",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true
+    }).format(now);
+
+    const dateElement =
+      document.getElementById("story-korea-date");
+
+    const clockElement =
+      document.getElementById("story-korea-clock");
+
+    if (dateElement) {
+      dateElement.textContent = koreaDate;
+    }
+
+    if (clockElement) {
+      clockElement.textContent = koreaTime;
+    }
+  }
+
+  updateStoryKoreaDateTime();
+
+  setInterval(
+    updateStoryKoreaDateTime,
+    30000
+  );
+</script>
+
+</body>
+</html>
 </body>
 
 </html>

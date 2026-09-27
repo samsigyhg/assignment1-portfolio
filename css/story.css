@@ -1,0 +1,451 @@
+/* ==================================================
+   STORY PAGE - MAIN PAGE SHELL MATCH
+   ================================================== */
+
+
+/* ---------- OUTER PAGE ---------- */
+
+.story-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 34px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e8e9ea 0%,
+      #d6d9dc 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* ==================================================
+   MACBOOK SCREEN
+   Main과 동일한 bezel
+   ================================================== */
+
+.story-page .story-laptop {
+  position: relative;
+
+  width: min(82vw, 1180px);
+  height: min(74vh, 650px);
+
+  min-height: 560px;
+
+  border: 11px solid #111214;
+  border-bottom-width: 11px;
+
+  border-radius:
+    22px 22px 14px 14px;
+
+  overflow: visible;
+
+  background:
+    rgba(255, 255, 255, 0.56);
+
+  box-shadow:
+    0 26px 55px rgba(0, 0, 0, 0.18);
+
+  transition:
+    background-color 0.8s ease,
+    background 0.8s ease;
+}
+
+
+/* ==================================================
+   macOS TOP BAR
+   ================================================== */
+
+.story-page .story-mac-bar {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 27px;
+
+  padding:
+    0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eef0f2 0%,
+      #dce0e4 100%
+    );
+
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.06);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: #151515;
+
+  z-index: 30;
+}
+
+
+/* ---------- LEFT MENU ---------- */
+
+.story-page .story-mac-left {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.story-page .story-apple-mark {
+  position: relative;
+
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  margin-right: 1px;
+
+  background: #161616;
+
+  border-radius:
+    52% 48% 55% 48%;
+}
+
+
+.story-page .story-apple-mark::before {
+  content: "";
+
+  position: absolute;
+
+  width: 3px;
+  height: 2px;
+
+  top: -2px;
+  left: 4px;
+
+  background: #161616;
+
+  border-radius:
+    100% 0 100% 0;
+
+  transform:
+    rotate(-32deg);
+}
+
+
+.story-page .story-apple-mark::after {
+  content: "";
+
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  right: -1px;
+  top: 2px;
+
+  background: #e4e8ec;
+
+  border-radius: 50%;
+}
+
+
+.story-page .story-menu-text {
+  font-size: 8.5px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.01em;
+
+  color: #111111;
+}
+
+
+.story-page .story-finder {
+  font-weight: 700;
+}
+
+
+/* ---------- RIGHT STATUS ---------- */
+
+.story-page .story-mac-right {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  font-size: 7.5px;
+
+  font-weight: 600;
+
+  color: #181818;
+}
+
+
+.story-page .story-status-item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 4px;
+
+  white-space: nowrap;
+}
+
+
+.story-page .story-datetime {
+  gap: 10px;
+}
+
+
+/* battery */
+
+.story-page .story-battery-shell {
+  position: relative;
+
+  display: inline-block;
+
+  width: 15px;
+  height: 7px;
+
+  border:
+    1px solid #4b4b4b;
+
+  border-radius: 2px;
+}
+
+
+.story-page .story-battery-shell::after {
+  content: "";
+
+  position: absolute;
+
+  right: -3px;
+  top: 2px;
+
+  width: 2px;
+  height: 3px;
+
+  background: #4b4b4b;
+
+  border-radius:
+    0 1px 1px 0;
+}
+
+
+.story-page .story-battery-level {
+  position: absolute;
+
+  left: 1px;
+  top: 1px;
+
+  width: 72%;
+  height: 3px;
+
+  background: #404040;
+
+  border-radius: 1px;
+}
+
+
+/* ==================================================
+   STORY NAV
+   Main navigation과 동일한 비율
+   ================================================== */
+
+.story-page .story-nav {
+  position: absolute;
+
+  top: 27px;
+  left: 0;
+  right: 0;
+
+  height: 64px;
+
+  padding:
+    0 6.5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 20;
+}
+
+
+/* H PORTFOLIO */
+
+.story-page .story-logo {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 5px;
+
+  min-width: 90px;
+
+  color: #0b0b0b;
+
+  text-decoration: none;
+
+  line-height: 1;
+}
+
+
+.story-page .story-logo-main {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 28px;
+
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  letter-spacing:
+    -0.05em;
+
+  color: #080808;
+}
+
+
+.story-page .story-logo-sub {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing:
+    0.28em;
+
+  color:
+    rgba(17, 17, 17, 0.72);
+
+  padding-left: 1px;
+}
+
+
+/* ABOUT / CAMPUS / FUTURE / GALLERY */
+
+.story-page .story-nav nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 34px;
+}
+
+
+.story-page .story-nav nav a {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.02em;
+
+  color: #090909;
+
+  text-decoration: none;
+
+  transition:
+    opacity 0.25s ease;
+}
+
+
+.story-page .story-nav nav a:hover {
+  opacity: 0.5;
+}
+
+
+/* ==================================================
+   SILVER MACBOOK BASE
+   Main과 동일
+   ================================================== */
+
+/*
+   Story.html에 아직 macbook-base가 없다면
+   다음 단계에서 추가할 예정.
+*/
+/* ==================================================
+   STORY TOP BAR COLOR FIX
+   ================================================== */
+
+/* 기존 style.css의 빨강/노랑/초록 nth-child 색상 제거 */
+.story-page .story-mac-left > span {
+  color: #111111 !important;
+}
+
+/* Apple 아이콘은 CSS 배경으로 표현 */
+.story-page .story-apple-mark {
+  color: transparent !important;
+}
+
+/* 메뉴 글씨 */
+.story-page .story-menu-text {
+  color: #111111 !important;
+  font-weight: 500;
+}
+
+/* Finder만 조금 더 굵게 */
+.story-page .story-finder {
+  font-weight: 700;
+}
+
+/* 오른쪽 상태 영역 */
+.story-page .story-mac-right {
+  gap: 11px;
+  color: #181818;
+}
+
+/* 날짜와 시간 사이 */
+.story-page .story-datetime {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+/* ==========================================
+   STORY NAV POSITION TUNING
+   ========================================== */
+
+/* ABOUT / CAMPUS / FUTURE / GALLERY만 위로 이동 */
+.story-page .story-nav nav {
+  transform: translateY(-14px);
+}
