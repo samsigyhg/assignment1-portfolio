@@ -142,11 +142,29 @@
 
       <div class="hero-text">
 
-        <h1>
-          Hello,<br>
-          I'm Hangyeol.
-        </h1>
+      <svg
+  class="handwriting-title"
+  viewBox="0 0 700 200"
+  aria-label="Hello, I'm Hangyeol."
+>
 
+  <text
+    id="hand-line-1"
+    class="hand-line"
+    x="5"
+    y="75"
+    data-text="Hello,"
+  ></text>
+
+  <text
+    id="hand-line-2"
+    class="hand-line"
+    x="5"
+    y="165"
+    data-text="I'm Hangyeol."
+  ></text>
+
+</svg>  
 
         <p>
           새로운 경험을 통해
@@ -178,10 +196,7 @@
     </main>
 
 
-    <!-- Scroll indicator -->
-    <div class="scroll-text">
-      SCROLL ↓
-    </div>
+    
 
   </div>
 <script>
@@ -211,6 +226,58 @@
 
   setInterval(updateKoreaDateTime, 30000);
 </script>
+</script>
+<script>
+  function createHandwritingLine(element, startIndex) {
+
+    const text = element.dataset.text;
+
+    element.textContent = "";
+
+    let index = startIndex;
+
+    [...text].forEach((character) => {
+
+      const letter = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "tspan"
+      );
+
+      letter.classList.add("hand-letter");
+
+      if (character === " ") {
+        letter.textContent = "\u00A0";
+      } else {
+        letter.textContent = character;
+      }
+
+      letter.style.setProperty("--letter-index", index);
+
+      element.appendChild(letter);
+
+      index++;
+    });
+
+    return index;
+  }
+
+
+  let nextLetterIndex = 0;
+
+  nextLetterIndex = createHandwritingLine(
+    document.getElementById("hand-line-1"),
+    nextLetterIndex
+  );
+
+
+  /* 첫 번째 줄이 끝난 뒤 약간 쉬도록 간격 추가 */
+  nextLetterIndex += 2;
+
+
+  createHandwritingLine(
+    document.getElementById("hand-line-2"),
+    nextLetterIndex
+  );
 </script>
 </body>
 
