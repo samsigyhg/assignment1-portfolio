@@ -3339,3 +3339,293 @@ body {
   }
 
 }
+/* ==========================================
+   ABOUT - MAIN STYLE LOGO
+   ========================================== */
+
+.about-detail-page .detail-logo {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 5px;
+
+  min-width: 90px;
+
+  color: #0b0b0b;
+
+  text-decoration: none;
+
+  line-height: 1;
+}
+
+
+.about-detail-page .detail-logo-main {
+  display: block;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 28px;
+
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.05em;
+
+  color: #080808;
+}
+
+
+.about-detail-page .detail-logo-sub {
+  display: block;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.28em;
+
+  color: #1b1b1b;
+
+  padding-left: 1px;
+}
+/* ==========================================
+   ABOUT TOP BAR - MATCH MAIN
+   ========================================== */
+
+.about-detail-page .detail-mac-bar {
+
+  height: 27px;
+
+  padding: 0 11px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e9ecef 0%,
+      #d9dde1 100%
+    );
+
+  border-bottom:
+    1px solid rgba(0,0,0,0.07);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: #161616;
+
+}
+
+
+/* 왼쪽 메뉴 */
+
+.about-detail-page .detail-mac-left {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+
+/* 기존 빨강/노랑/초록 점 완전 제거 */
+
+.about-detail-page .detail-mac-left > span {
+
+  color: #111 !important;
+
+}
+
+
+.about-detail-page .detail-apple-mark {
+
+  position: relative;
+
+  width: 9px;
+
+  height: 11px;
+
+  margin-right: 1px;
+
+}
+
+
+/* 간단한 Apple 스타일 아이콘 */
+
+.about-detail-page .detail-apple-mark::before {
+
+  content: "●";
+
+  position: absolute;
+
+  left: 0;
+
+  top: -2px;
+
+  font-size: 8px;
+
+  color: #111;
+
+}
+
+
+.about-detail-page .detail-apple-mark::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 3px;
+
+  height: 4px;
+
+  left: 5px;
+
+  top: -2px;
+
+  border-radius: 100% 0;
+
+  background: #111;
+
+  transform: rotate(-35deg);
+
+}
+
+
+.about-detail-page .detail-menu-text {
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0;
+
+}
+
+
+.about-detail-page .detail-finder {
+
+  font-weight: 700;
+
+}
+
+
+/* 오른쪽 상태 */
+
+.about-detail-page .detail-mac-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  font-size: 7.5px;
+
+  font-weight: 600;
+
+  color: #161616;
+
+}
+
+
+.about-detail-page .detail-status-item {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  white-space: nowrap;
+
+}
+
+
+.about-detail-page .detail-datetime {
+
+  gap: 10px;
+
+}
+
+
+/* 배터리 */
+
+.about-detail-page .detail-battery-shell {
+
+  position: relative;
+
+  display: inline-block;
+
+  width: 15px;
+
+  height: 7px;
+
+  border: 1px solid #555;
+
+  border-radius: 2px;
+
+}
+
+
+.about-detail-page .detail-battery-shell::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -2px;
+
+  top: 1px;
+
+  width: 1px;
+
+  height: 3px;
+
+  background: #555;
+
+}
+
+
+.about-detail-page .detail-battery-level {
+
+  position: absolute;
+
+  left: 1px;
+
+  top: 1px;
+
+  bottom: 1px;
+
+  width: 85%;
+
+  background: #333;
+
+  border-radius: 1px;
+
+}

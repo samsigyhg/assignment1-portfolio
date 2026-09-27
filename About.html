@@ -15,33 +15,79 @@
 
   <div class="detail-frame">
 
-    <!-- Top bar -->
-    <div class="detail-mac-bar">
+   <div class="detail-mac-bar">
 
-      <div class="detail-mac-left">
-        <span>●</span>
-        <span>●</span>
-        <span>●</span>
+  <div class="detail-mac-left">
 
-        <span class="detail-menu-text">Finder</span>
-        <span class="detail-menu-text">File</span>
-        <span class="detail-menu-text">Edit</span>
-        <span class="detail-menu-text">View</span>
-      </div>
+    <span class="detail-apple-mark"></span>
 
-      <div class="detail-mac-right">
-        <span>10:24 AM</span>
-      </div>
+    <span class="detail-menu-text detail-finder">
+      Finder
+    </span>
 
-    </div>
+    <span class="detail-menu-text">
+      File
+    </span>
+
+    <span class="detail-menu-text">
+      Edit
+    </span>
+
+    <span class="detail-menu-text">
+      View
+    </span>
+
+    <span class="detail-menu-text">
+      Go
+    </span>
+
+    <span class="detail-menu-text">
+      Window
+    </span>
+
+    <span class="detail-menu-text">
+      Help
+    </span>
+
+  </div>
+
+
+  <div class="detail-mac-right">
+
+    <span class="detail-status-item">
+      Wi-Fi
+    </span>
+
+    <span class="detail-status-item">
+
+      <span class="detail-battery-shell">
+        <span class="detail-battery-level"></span>
+      </span>
+
+      100%
+
+    </span>
+
+    <span class="detail-status-item detail-datetime">
+
+      <span id="detail-korea-date"></span>
+
+      <span id="detail-korea-clock"></span>
+
+    </span>
+
+  </div>
+
+</div>
 
 
     <!-- Navigation -->
     <header class="detail-nav">
 
       <a href="Main.html" class="detail-logo">
-        JM
-      </a>
+  <span class="detail-logo-main">H</span>
+  <span class="detail-logo-sub">PORTFOLIO</span>
+</a>
 
       <nav>
         <a href="About.html" class="active-nav">ABOUT</a>
@@ -207,7 +253,69 @@
     </main>
 
   </div>
+<script>
 
+  function updateDetailKoreaDateTime() {
+
+    const now = new Date();
+
+    const koreaDate =
+      new Intl.DateTimeFormat(
+        "en-US",
+        {
+          timeZone: "Asia/Seoul",
+          weekday: "short",
+          month: "short",
+          day: "numeric"
+        }
+      ).format(now);
+
+
+    const koreaTime =
+      new Intl.DateTimeFormat(
+        "en-US",
+        {
+          timeZone: "Asia/Seoul",
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: true
+        }
+      ).format(now);
+
+
+    const dateElement =
+      document.getElementById(
+        "detail-korea-date"
+      );
+
+    const clockElement =
+      document.getElementById(
+        "detail-korea-clock"
+      );
+
+
+    if (dateElement) {
+      dateElement.textContent =
+        koreaDate;
+    }
+
+
+    if (clockElement) {
+      clockElement.textContent =
+        koreaTime;
+    }
+
+  }
+
+
+  updateDetailKoreaDateTime();
+
+  setInterval(
+    updateDetailKoreaDateTime,
+    30000
+  );
+
+</script>
 </body>
 
 </html>
