@@ -1,0 +1,1245 @@
+/* ==================================================
+   MAIN PAGE - FINAL REFERENCE VERSION
+   목표: 우리가 만든 최종 MacBook 이미지
+   ================================================== */
+
+
+/* ---------- PAGE BACKGROUND ---------- */
+
+.main-page {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e8e9ea 0%,
+      #d6d9dc 100%
+    );
+
+  padding: 34px;
+}
+
+
+/* ==================================================
+   MACBOOK SCREEN
+   ================================================== */
+
+.main-page .laptop {
+  position: relative;
+
+  width: min(82vw, 1180px);
+  height: min(74vh, 650px);
+
+  min-height: 560px;
+
+  background: #f7f1e8;
+
+  /* 우리가 만든 이미지처럼 얇은 bezel */
+  border: 6px solid #111214;
+
+  border-bottom-width: 7px;
+
+  border-radius:
+    18px 18px 11px 11px;
+
+  overflow: visible;
+
+  box-shadow:
+    0 30px 65px
+    rgba(0, 0, 0, 0.18);
+}
+
+
+/* 기존 장식 제거 */
+
+.main-page .laptop::before {
+  display: none;
+}
+
+
+/* ==================================================
+   macOS TOP BAR
+   ================================================== */
+
+.main-page .mac-bar {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 24px;
+
+  padding: 0 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eef1f4 0%,
+      #dce1e6 100%
+    );
+
+  border-bottom:
+    1px solid rgba(0,0,0,0.06);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: #171717;
+
+  z-index: 30;
+}
+
+
+/* ---------- LEFT MAC MENU ---------- */
+
+.main-page .mac-left {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* 작은 Apple 모양을 CSS로 만듦 */
+
+.main-page .apple-mark {
+  position: relative;
+
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  margin-right: 1px;
+
+  background: #161616;
+
+  border-radius:
+    52% 48% 55% 48%;
+}
+
+
+/* apple leaf */
+
+.main-page .apple-mark::before {
+  content: "";
+
+  position: absolute;
+
+  width: 3px;
+  height: 2px;
+
+  top: -2px;
+  left: 4px;
+
+  background: #161616;
+
+  border-radius: 100% 0 100% 0;
+
+  transform: rotate(-32deg);
+}
+
+
+/* apple bite */
+
+.main-page .apple-mark::after {
+  content: "";
+
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  right: -1px;
+  top: 2px;
+
+  background: #e6eaee;
+
+  border-radius: 50%;
+}
+
+
+.main-page .menu-text {
+  font-size: 7px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 0;
+
+  color: #171717;
+}
+
+
+.main-page .finder {
+  font-weight: 600;
+}
+
+
+/* ---------- RIGHT STATUS ---------- */
+
+.main-page .mac-right {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 6.5px;
+
+  font-weight: 500;
+
+  letter-spacing: 0;
+
+  color: #202020;
+}
+
+
+.main-page .status-item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 3px;
+}
+
+
+.main-page .wifi {
+  font-size: 6.5px;
+}
+
+
+/* battery */
+
+.main-page .battery-shell {
+  position: relative;
+
+  display: inline-block;
+
+  width: 15px;
+  height: 7px;
+
+  border: 1px solid #4b4b4b;
+
+  border-radius: 2px;
+}
+
+
+.main-page .battery-shell::after {
+  content: "";
+
+  position: absolute;
+
+  right: -3px;
+  top: 2px;
+
+  width: 2px;
+  height: 3px;
+
+  border-radius: 0 1px 1px 0;
+
+  background: #4b4b4b;
+}
+
+
+.main-page .battery-level {
+  position: absolute;
+
+  left: 1px;
+  top: 1px;
+
+  width: 72%;
+  height: 3px;
+
+  border-radius: 1px;
+
+  background: #404040;
+}
+
+
+/* ==================================================
+   SITE NAVIGATION
+   ================================================== */
+
+.main-page .main-nav {
+  position: absolute;
+
+  top: 24px;
+  left: 0;
+  right: 0;
+
+  height: 62px;
+
+  padding:
+    0 5.5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+
+  z-index: 20;
+}
+
+
+.main-page .logo {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  color: #111;
+
+  letter-spacing: 0;
+}
+
+
+.main-page .main-nav nav {
+  display: flex;
+  align-items: center;
+
+  gap: 31px;
+}
+
+
+.main-page .main-nav nav a {
+  padding: 0;
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7.5px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.025em;
+
+  line-height: 1;
+
+  color: #111;
+
+  text-decoration: none;
+
+  transition:
+    opacity 0.25s ease;
+}
+
+
+.main-page .main-nav nav a:hover {
+  opacity: 0.45;
+}
+
+
+/* ==================================================
+   HERO
+   ================================================== */
+
+.main-page .hero {
+  position: absolute;
+
+  top: 24px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 0;
+  margin: 0;
+
+  overflow: hidden;
+
+  display: block;
+
+  /*
+    실제 사진 넣기 전까지
+    목표 이미지의 노을 분위기를 만들어줌
+  */
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(250,244,235,0.95) 0%,
+      rgba(250,235,219,0.83) 40%,
+      rgba(231,198,175,0.68) 62%,
+      rgba(198,209,220,0.60) 100%
+    ),
+
+    url(
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80"
+    );
+
+  background-size: cover;
+
+  background-position:
+    center center;
+}
+
+
+/* 화면 전체에 부드러운 haze */
+
+.main-page .hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(250,246,240,0.82) 0%,
+      rgba(250,241,229,0.54) 40%,
+      rgba(255,255,255,0.10) 100%
+    );
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* ==================================================
+   HERO TEXT
+   ================================================== */
+
+.main-page .hero-text {
+  position: absolute;
+
+  left: 7.5%;
+  top: 34%;
+
+  width: 49%;
+
+  padding: 0;
+  margin: 0;
+
+  z-index: 10;
+}
+
+
+.main-page .hero-text h1 {
+  margin:
+    0 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(54px, 4.6vw, 68px);
+
+  line-height: 0.94;
+
+  font-weight: 500;
+
+  letter-spacing:
+    -0.045em;
+
+  color: #0c1830;
+
+  text-shadow:
+    0 1px 0
+    rgba(255,255,255,0.16);
+
+  white-space: nowrap;
+}
+
+
+.main-page .hero-text p {
+  width: 360px;
+  max-width: 100%;
+
+  margin:
+    0 0 23px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+
+  color:
+    rgba(25, 28, 33, 0.74);
+
+  word-break: keep-all;
+}
+
+
+/* ==================================================
+   CTA BUTTON
+   ================================================== */
+
+.main-page .explore-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 17px;
+
+  min-height: 42px;
+
+  padding:
+    0 22px;
+
+  border-radius: 999px;
+
+  background:
+    #0b1830;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.06em;
+
+  box-shadow:
+    0 9px 20px
+    rgba(10,24,48,0.16);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.main-page .explore-btn span {
+  font-size: 15px;
+}
+
+
+.main-page .explore-btn:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 13px 26px
+    rgba(10,24,48,0.22);
+}
+
+
+/* ==================================================
+   PORTRAIT
+   ================================================== */
+
+.main-page .hero-image {
+  position: absolute;
+
+  right: -1%;
+  bottom: 0;
+
+  width: 46%;
+  height: 84%;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 0;
+
+  box-shadow: none;
+
+  z-index: 6;
+
+  /*
+    현재 임시 사진의 사각형 배경을
+    조금 자연스럽게 숨겨준다.
+  */
+
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0,0,0,0.25) 11%,
+      #000 31%,
+      #000 100%
+    );
+
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0,0,0,0.25) 11%,
+      #000 31%,
+      #000 100%
+    );
+}
+
+
+.main-page .hero-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position:
+    center 18%;
+
+  border-radius: 0;
+
+  filter:
+    saturate(0.80)
+    contrast(1.03);
+}
+
+
+/* good things... 완전히 제거 */
+
+.main-page .hero-note {
+  display: none !important;
+}
+
+
+/* ==================================================
+   SCROLL
+   ================================================== */
+
+.main-page .scroll-text {
+  position: absolute;
+
+  left: 10.5%;
+  bottom: 22px;
+
+  z-index: 20;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing:
+    0.14em;
+
+  color:
+    rgba(20, 23, 28, 0.72);
+}
+
+
+/* ==================================================
+   MACBOOK BASE
+   ================================================== */
+
+.main-page .macbook-base {
+  position: absolute;
+
+  left: 50%;
+  bottom: -16px;
+
+  transform:
+    translateX(-50%);
+
+  width: 107%;
+
+  height: 14px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8f9fa 0%,
+      #e4e7ea 23%,
+      #c7ccd1 60%,
+      #a8aeb5 100%
+    );
+
+  border:
+    1px solid #adb3b9;
+
+  border-top:
+    1px solid #ffffff;
+
+  border-radius:
+    1px 1px 11px 11px;
+
+  box-shadow:
+    0 11px 17px
+    rgba(0,0,0,0.14);
+
+  z-index: -1;
+}
+
+
+/* 가운데 홈 */
+
+.main-page .macbook-base::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  width: 18%;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      #dfe2e5,
+      #bfc5ca
+    );
+
+  border-radius:
+    0 0 7px 7px;
+}
+
+
+/* laptop shadow */
+
+.main-page .macbook-base::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  transform:
+    translateX(-50%);
+
+  width: 72%;
+
+  height: 7px;
+
+  background:
+    rgba(0,0,0,0.12);
+
+  border-radius: 50%;
+
+  filter: blur(7px);
+}
+
+
+.main-page .base-notch {
+  display: none;
+}
+
+
+/* ==================================================
+   SMALL SCREEN
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  .main-page {
+    padding:
+      20px;
+  }
+
+
+  .main-page .laptop {
+    width: 94vw;
+
+    height: 620px;
+  }
+
+
+  .main-page .main-nav {
+    padding:
+      0 28px;
+  }
+
+
+  .main-page .main-nav nav {
+    display: none;
+  }
+
+
+  .main-page .hero-text {
+    left: 8%;
+
+    top: 27%;
+
+    width: 68%;
+  }
+
+
+  .main-page .hero-text h1 {
+    font-size:
+      48px;
+  }
+
+
+  .main-page .hero-image {
+    width: 55%;
+
+    height: 58%;
+  }
+
+}
+/* ==================================================
+   FINAL MACBOOK DETAIL TUNING
+   ================================================== */
+
+
+/* 1. 검은 MacBook bezel을 조금 더 선명하게 */
+.main-page .laptop {
+  border: 8px solid #111214;
+  border-bottom-width: 9px;
+
+  border-radius: 20px 20px 13px 13px;
+}
+
+
+/* 2. macOS 상단바 높이 조금 키우기 */
+.main-page .mac-bar {
+  height: 27px;
+
+  padding: 0 12px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eef0f2 0%,
+      #dce0e4 100%
+    );
+}
+
+
+/* 3. 기존 style.css에서 들어오는
+   빨강/노랑/초록 글자색 제거 */
+.main-page .mac-left .menu-text {
+  color: #151515 !important;
+}
+
+
+/* Apple mark */
+.main-page .apple-mark {
+  color: transparent !important;
+}
+
+
+/* 4. Finder / File / Edit... 크기 */
+.main-page .menu-text {
+  font-size: 8.5px;
+
+  font-weight: 400;
+
+  letter-spacing: 0;
+
+  color: #151515 !important;
+}
+
+
+.main-page .finder {
+  font-weight: 600;
+}
+
+
+/* 메뉴 사이 간격 */
+.main-page .mac-left {
+  gap: 9px;
+}
+
+
+/* 5. 오른쪽 Wi-Fi / battery / time도 조금 키우기 */
+.main-page .mac-right {
+  gap: 7px;
+
+  font-size: 7.5px;
+
+  font-weight: 500;
+
+  color: #222222;
+}
+
+
+.main-page .wifi {
+  font-size: 7.5px;
+}
+
+
+/* 6. H와 사이트 메뉴도 약간 더 또렷하게 */
+.main-page .main-nav {
+  top: 27px;
+
+  height: 64px;
+}
+
+
+.main-page .logo {
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+.main-page .main-nav nav {
+  gap: 32px;
+}
+
+
+.main-page .main-nav nav a {
+  font-size: 8.5px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.025em;
+}
+
+
+/* ==================================================
+   MACBOOK BOTTOM BASE
+   ================================================== */
+
+.main-page .macbook-base {
+  width: 106.5%;
+
+  height: 19px;
+
+  bottom: -21px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fafafa 0%,
+      #eceef0 18%,
+      #cfd3d7 55%,
+      #a8adb3 100%
+    );
+
+  border: 1px solid #a4a9ae;
+
+  border-top:
+    1px solid #ffffff;
+
+  border-radius:
+    2px 2px 15px 15px;
+
+  box-shadow:
+    0 12px 20px rgba(0,0,0,0.14);
+
+  z-index: -1;
+}
+
+
+/* 중앙의 MacBook 홈 */
+.main-page .macbook-base::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  transform:
+    translateX(-50%);
+
+  width: 23%;
+
+  height: 5px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #dadde0,
+      #b9bec3
+    );
+
+  border-radius:
+    0 0 9px 9px;
+}
+
+
+/* 바닥 그림자 */
+.main-page .macbook-base::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -9px;
+
+  transform:
+    translateX(-50%);
+
+  width: 70%;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0,0,0,0.13);
+
+  filter:
+    blur(8px);
+}
+/* ==================================================
+   TOP BAR + NAV FONT WEIGHT TUNING
+   ================================================== */
+
+
+/* Finder / File / Edit / View / Go / Window / Help */
+.main-page .menu-text {
+  font-size: 8.5px;
+
+  font-weight: 500;
+
+  color: #111111 !important;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* Finder는 살짝 더 강하게 */
+.main-page .finder {
+  font-weight: 700;
+}
+
+
+/* 오른쪽 Wi-Fi / battery / date & time */
+.main-page .mac-right {
+  font-size: 7.5px;
+
+  font-weight: 600;
+
+  color: #181818;
+}
+
+
+.main-page .wifi,
+.main-page .time {
+  font-weight: 600;
+}
+
+
+/* H 로고 */
+.main-page .logo {
+  font-size: 15px;
+
+  font-weight: 800;
+
+  color: #0b0b0b;
+}
+
+
+/* ABOUT / CAMPUS / FUTURE / GALLERY */
+.main-page .main-nav nav a {
+  font-size: 8.5px;
+
+  font-weight: 650;
+
+  letter-spacing: 0.025em;
+
+  color: #0d0d0d;
+}
+/* ==================================================
+   HEADER FINAL BALANCE
+   ================================================== */
+
+
+/* ABOUT / CAMPUS / FUTURE / GALLERY
+   조금 더 힘 있게 */
+.main-page .main-nav nav a {
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+
+  color: #090909;
+}
+
+
+/* 메뉴 사이도 조금 여유 있게 */
+.main-page .main-nav nav {
+  gap: 34px;
+}
+
+
+/* ==================================================
+   LEFT WORDMARK
+   ================================================== */
+
+.main-page .logo {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 1px;
+
+  color: #0b0b0b;
+
+  text-decoration: none;
+
+  line-height: 1;
+}
+
+
+.main-page .logo-main {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+
+.main-page .logo-sub {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 5px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  color: rgba(20, 20, 20, 0.58);
+}
+
+
+/* ==================================================
+   RIGHT SYSTEM STATUS
+   ================================================== */
+
+.main-page .mac-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  font-size: 7.5px;
+
+  font-weight: 600;
+
+  color: #161616;
+}
+
+
+/* Wi-Fi / battery / date-time 각각 분리감 */
+.main-page .status-item {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  white-space: nowrap;
+}
+
+
+/* 날짜/시간은 왼쪽과 조금 더 떨어지게 */
+.main-page .time {
+  margin-left: 2px;
+
+  font-weight: 600;
+}
+/* ==================================================
+   H PORTFOLIO WORDMARK
+   ================================================== */
+/* ==================================================
+   H PORTFOLIO WORDMARK - FINAL
+   ================================================== */
+
+.main-page .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 5px;
+
+  color: #0b0b0b;
+  text-decoration: none;
+
+  line-height: 1;
+
+  min-width: 90px;
+}
+
+
+/* 큰 H */
+.main-page .logo-main {
+  display: block;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 28px;
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.05em;
+
+  color: #080808;
+}
+
+
+/* H 아래 PORTFOLIO */
+.main-page .logo-sub {
+  display: block;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.28em;
+
+  color: #1b1b1b;
+
+  padding-left: 1px;
+}
+
+
+/* 로고 위치도 예시처럼 조금 더 여유 있게 */
+.main-page .main-nav {
+  padding-left: 6.5%;
+  padding-right: 6%;
+}

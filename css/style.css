@@ -448,6 +448,753 @@ body {
 
 }
 /* ==========================================
+   MAIN PAGE - FINAL TUNING
+   ========================================== */
+
+.main-page .hero {
+  align-items: center;
+}
+
+.main-page .hero-text {
+  width: 52%;
+  margin-top: 0;
+  padding-left: 14px;
+}
+
+.main-page .hero-text h1 {
+  font-size: 60px;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.main-page .hero-text p {
+  width: 380px;
+  max-width: 100%;
+  word-break: keep-all;
+}
+
+.main-page .hero-image {
+  width: 39%;
+  height: 440px;
+}
+
+.main-page .hero-note {
+  top: 85px;
+  right: 55px;
+
+  font-size: 16px;
+  line-height: 1.05;
+
+  transform: rotate(-8deg);
+}
+
+.main-page .scroll-text {
+  left: 90px;
+  bottom: 18px;
+}/* ==========================================
+   STORY PAGE
+   ==================================/* =========================
+   MAIN PAGE BACKGROUND
+   ========================= */
+
+.main-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #f5f5f5 0%, #dfe1e4 30%, #caced1 100%);
+  padding: 40px 18px 70px;
+}
+
+/* =========================
+   LAPTOP / BROWSER FRAME
+   ========================= */
+
+.laptop {
+  width: min(92vw, 1200px);
+  min-height: 740px;
+  background: linear-gradient(180deg, #f7f3ea 0%, #f1efe8 100%);
+  border: 11px solid #111111;
+  border-bottom-width: 12px;
+  border-radius: 26px 26px 18px 18px;
+  overflow: visible;
+  position: relative;
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.26),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  z-index: 1;
+}
+
+.laptop::before {
+  content: "";
+  position: absolute;
+  inset: 8px 14px auto 14px;
+  height: 1px;
+  background: rgba(255,255,255,0.6);
+  z-index: 3;
+}
+
+/* =========================
+   MACBOOK BASE DETAIL
+   ========================= */
+
+.macbook-base {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -32px;
+  width: 112%;
+  height: 34px;
+  background: linear-gradient(180deg, #ebedf0 0%, #bfc3c9 24%, #8a8f96 100%);
+  border: 1px solid rgba(90, 95, 101, 0.8);
+  border-top: 1px solid rgba(255,255,255,0.7);
+  border-radius: 0 0 18px 18px;
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.7),
+    0 16px 24px rgba(0,0,0,0.15);
+  z-index: 0;
+}
+
+.macbook-base::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4px;
+  width: 48%;
+  height: 14px;
+  border-radius: 10px 10px 12px 12px;
+  background: linear-gradient(180deg, #dfe3e8 0%, #b6bcc4 100%);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.macbook-base::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18px;
+  width: 82%;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.12);
+  filter: blur(8px);
+}
+
+.base-notch {
+  position: absolute;
+  inset: auto 24% 6px 24%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(90,95,101,0.22);
+}
+
+/* =========================
+   MAC TOP BAR
+   ========================= */
+
+.mac-bar {
+  height: 40px;
+  padding: 0 18px 0 16px;
+  background: linear-gradient(180deg, #ebebeb 0%, #d7d7d7 100%);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #1d1d1d;
+}
+
+.mac-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mac-left span:nth-child(1) { color: #ff5f57; }
+.mac-left span:nth-child(2) { color: #febc2e; }
+.mac-left span:nth-child(3) { color: #28c840; }
+
+.menu-text {
+  color: #222;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.mac-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  color: #2d2d2d;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.status-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.95;
+}
+
+.wifi {
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+.battery {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.battery-shell {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+  border: 1px solid rgba(0,0,0,0.7);
+  border-radius: 3px;
+  background: rgba(255,255,255,0.45);
+}
+
+.battery-shell::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 3px;
+  width: 2px;
+  height: 5px;
+  border-radius: 1px;
+  background: rgba(0,0,0,0.8);
+}
+
+.battery-level {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  bottom: 2px;
+  width: 74%;
+  background: linear-gradient(90deg, #3a3a3a, #5a5a5a);
+  border-radius: 2px;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 52px 18px;
+  min-height: 82px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.main-nav nav {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #111111;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  opacity: 0.55;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 18px 72px 68px;
+}
+
+.hero-text {
+  width: 48%;
+  position: relative;
+  z-index: 2;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text h1 {
+  margin: 0 0 24px;
+  font-family: Georgia, serif;
+  font-size: clamp(62px, 6vw, 96px);
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: #10182c;
+}
+
+.hero-text p {
+  width: min(100%, 360px);
+  line-height: 1.8;
+  color: #555555;
+  margin: 0 0 34px;
+  font-size: 15px;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 17px 26px 17px 24px;
+  border-radius: 999px;
+  background: #10182c;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  transition: 0.3s ease;
+  box-shadow: 0 12px 30px rgba(16, 24, 44, 0.18);
+  width: fit-content;
+}
+
+.explore-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(16, 24, 44, 0.24);
+}
+
+.explore-btn span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* =========================
+   IMAGE
+   ========================= */
+
+.hero-image {
+  width: 52%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 42% 42% 12% 42%;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06), 0 24px 50px rgba(0, 0, 0, 0.12);
+  align-self: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   BOTTOM TEXT
+   ========================= */
+
+.scroll-text {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #555555;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+  .main-page {
+    padding: 24px 14px 42px;
+  }
+
+  .laptop {
+    width: min(94vw, 820px);
+    min-height: 600px;
+  }
+
+  .main-nav {
+    padding: 20px 24px 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px 30px 56px;
+    text-align: center;
+  }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-text {
+    padding-left: 0;
+  }
+
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .explore-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image {
+    margin-top: 10px;
+    height: 360px;
+  }
+
+  .main-nav nav {
+    display: none;
+  }
+
+  .mac-right {
+    gap: 8px;
+    font-size: 9px;
+  }
+
+  .status-item {
+    gap: 4px;
+  }
+}
+.main-page .scroll-text {
+    ...
+}
+
+
+/* ==========================================
+   MAIN PAGE - REFERENCE MATCH
+   ========================================== */
+
+/* 새로 준 코드 전부 */
+/* ==========================================
+   MAIN PAGE - FINAL MACBOOK SHELL
+   ========================================== */
+
+/* 바깥 배경 */
+.main-page {
+  background: #e1e3e5;
+
+  padding:
+    26px 18px 44px;
+}
+
+
+/* ==========================================
+   THIN MACBOOK SCREEN
+   ========================================== */
+
+.main-page .laptop {
+  border:
+    6px solid #101010;
+
+  border-bottom-width:
+    7px;
+
+  border-radius:
+    18px 18px 12px 12px;
+
+  background:
+    #f7f3ec;
+
+  box-shadow:
+    0 24px 55px
+    rgba(0, 0, 0, 0.16);
+}
+
+
+/* 기존 안쪽 highlight 제거 */
+.main-page .laptop::before {
+  display: none;
+}
+
+
+/* ==========================================
+   macOS MENU BAR
+   ========================================== */
+
+.main-page .mac-bar {
+  height: 24px;
+
+  padding:
+    0 10px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e9ecef 0%,
+      #d9dde1 100%
+    );
+
+  border-bottom:
+    1px solid rgba(0,0,0,0.07);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color:
+    #1c1c1c;
+}
+
+
+/* 왼쪽 메뉴 */
+.main-page .mac-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* 왼쪽 작은 아이콘 */
+.main-page .apple-mark {
+  color: #111111;
+
+  font-size: 5px;
+
+  margin-right: 1px;
+}
+
+
+/* Finder / File / Edit ... */
+.main-page .menu-text {
+  font-size: 7px;
+
+  font-weight: 400;
+
+  letter-spacing: 0;
+
+  line-height: 1;
+
+  color: #202020;
+}
+
+
+.main-page .menu-strong {
+  font-weight: 600;
+}
+
+
+/* 오른쪽 상태 표시 */
+.main-page .mac-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 6.5px;
+
+  font-weight: 500;
+
+  letter-spacing: 0;
+
+  color: #222222;
+}
+
+
+.main-page .status-item {
+  gap: 3px;
+}
+
+
+.main-page .wifi {
+  font-size: 6.5px;
+}
+
+
+/* 배터리 */
+.main-page .battery-shell {
+  width: 15px;
+  height: 7px;
+
+  border:
+    1px solid #555;
+
+  border-radius:
+    2px;
+}
+
+
+.main-page .battery-shell::after {
+  right: -2px;
+
+  top: 1px;
+
+  width: 1px;
+  height: 3px;
+}
+
+
+.main-page .battery-level {
+  left: 1px;
+  top: 1px;
+  bottom: 1px;
+
+  width: 72%;
+}
+
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+.main-page .main-nav {
+  top: 24px;
+
+  height: 58px;
+
+  padding:
+    0 5.5%;
+}
+
+
+.main-page .logo {
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.main-page .main-nav nav {
+  gap: 28px;
+}
+
+
+.main-page .main-nav nav a {
+  font-size: 7.5px;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.035em;
+}
+
+
+/* ==========================================
+   SILVER MACBOOK BASE
+   ========================================== */
+
+.main-page .macbook-base {
+  width: 107%;
+
+  height: 14px;
+
+  bottom: -16px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f5f6f7 0%,
+      #e1e4e7 24%,
+      #c7ccd1 62%,
+      #a9afb6 100%
+    );
+
+  border:
+    1px solid #aeb3b8;
+
+  border-top:
+    1px solid #ffffff;
+
+  border-radius:
+    1px 1px 11px 11px;
+
+  box-shadow:
+    0 11px 18px
+    rgba(0,0,0,0.13);
+
+  z-index: 0;
+}
+
+
+/* 가운데 MacBook 홈 */
+.main-page .macbook-base::before {
+  top: 0;
+
+  width: 18%;
+
+  height: 4px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #d8dce0,
+      #bfc4c9
+    );
+
+  border-radius:
+    0 0 8px 8px;
+}
+
+
+/* 아래 그림자 */
+.main-page .macbook-base::after {
+  bottom: -8px;
+
+  width: 72%;
+
+  height: 7px;
+
+  background:
+    rgba(0,0,0,0.11);
+
+  filter:
+    blur(7px);
+}
+
+
+/* 기존 notch 제거 */
+.main-page .base-notch {
+  display: none;
+}
+
+
+/* ==========================================
+   STORY PAGE
+   ========================================== */
+
+.story-page {
+    ...
+}
+/* ==========================================
    STORY PAGE
    ========================================== */
 

@@ -3,56 +3,141 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Hangyeol Portfolio</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- 전체 사이트 기본 CSS -->
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+  <!-- Main 페이지 전용 CSS -->
+  <link
+    rel="stylesheet"
+    href="css/main.css"
+  >
 </head>
+
 
 <body class="main-page">
 
   <div class="laptop">
 
+    <!-- MacBook silver base -->
+    <div
+      class="macbook-base"
+      aria-hidden="true"
+    >
+      <div class="base-notch"></div>
+    </div>
+
+
     <!-- macOS top bar -->
     <div class="mac-bar">
 
       <div class="mac-left">
-        <span>●</span>
-        <span>●</span>
-        <span>●</span>
 
-        <span class="menu-text">Finder</span>
-        <span class="menu-text">File</span>
-        <span class="menu-text">Edit</span>
-        <span class="menu-text">View</span>
+        <span class="apple-mark"></span>
+
+        <span class="menu-text finder">
+          Finder
+        </span>
+
+        <span class="menu-text">
+          File
+        </span>
+
+        <span class="menu-text">
+          Edit
+        </span>
+
+        <span class="menu-text">
+          View
+        </span>
+
+        <span class="menu-text">
+          Go
+        </span>
+
+        <span class="menu-text">
+          Window
+        </span>
+
+        <span class="menu-text">
+          Help
+        </span>
+
       </div>
 
-      <div class="mac-right">
-        <span>10:24 AM</span>
+
+      <div
+        class="mac-right"
+        aria-label="System status"
+      >
+
+        <span class="status-item wifi">
+          ◔ Wi-Fi
+        </span>
+
+
+        <span class="status-item battery">
+
+          <span class="battery-shell">
+            <span class="battery-level"></span>
+          </span>
+
+          100%
+
+        </span>
+
+
+      <span class="status-item datetime">
+  <span id="korea-date"></span>
+  <span id="korea-clock"></span>
+</span>  
       </div>
 
     </div>
 
 
-    <!-- Navigation -->
+    <!-- Portfolio navigation -->
     <header class="main-nav">
 
-      <div class="logo">
-        JM
-      </div>
+      <a href="Main.html" class="logo">
+  <span class="logo-main">H</span>
+  <span class="logo-sub">PORTFOLIO</span>
+</a>
 
       <nav>
-        <a href="About.html">ABOUT</a>
-        <a href="Campus.html">CAMPUS</a>
-        <a href="Future.html">FUTURE</a>
-        <a href="Gallery.html">GALLERY</a>
+
+        <a href="About.html">
+          ABOUT
+        </a>
+
+        <a href="Campus.html">
+          CAMPUS
+        </a>
+
+        <a href="Future.html">
+          FUTURE
+        </a>
+
+        <a href="Gallery.html">
+          GALLERY
+        </a>
+
       </nav>
 
     </header>
 
 
-    <!-- Main content -->
+    <!-- Hero -->
     <main class="hero">
 
       <div class="hero-text">
@@ -62,12 +147,17 @@
           I'm Hangyeol.
         </h1>
 
+
         <p>
           새로운 경험을 통해
           더 나은 내가 되고 싶은 대학생입니다.
         </p>
 
-        <a href="Story.html" class="explore-btn">
+
+        <a
+          href="Story.html"
+          class="explore-btn"
+        >
           EXPLORE MY STORY
           <span>→</span>
         </a>
@@ -75,6 +165,7 @@
       </div>
 
 
+      <!-- Temporary profile image -->
       <div class="hero-image">
 
         <img
@@ -87,13 +178,40 @@
     </main>
 
 
-    <!-- Bottom text -->
+    <!-- Scroll indicator -->
     <div class="scroll-text">
       SCROLL ↓
     </div>
 
   </div>
+<script>
+  function updateKoreaDateTime() {
 
+    const now = new Date();
+
+    const koreaDate = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Seoul",
+      weekday: "short",
+      month: "short",
+      day: "numeric"
+    }).format(now);
+
+    const koreaTime = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Seoul",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true
+    }).format(now);
+
+    document.getElementById("korea-date").textContent = koreaDate;
+    document.getElementById("korea-clock").textContent = koreaTime;
+  }
+
+  updateKoreaDateTime();
+
+  setInterval(updateKoreaDateTime, 30000);
+</script>
+</script>
 </body>
 
 </html>
