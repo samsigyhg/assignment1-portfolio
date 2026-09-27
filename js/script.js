@@ -112,10 +112,16 @@ function updateCarousel() {
      배경색 변경
   */
 
-  document.body.style
-    .backgroundColor =
-    themes[currentIndex];
+ document.body.style.backgroundColor =
+  themes[currentIndex];
 
+const storyLaptop =
+  document.querySelector(".story-laptop");
+
+if (storyLaptop) {
+  storyLaptop.style.backgroundColor =
+    themes[currentIndex] + "CC";
+}
 }
 
 

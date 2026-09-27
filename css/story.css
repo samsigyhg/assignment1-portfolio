@@ -683,3 +683,400 @@
     inset 0 2px 3px rgba(45,50,55,0.42),
     0 1px 1px rgba(255,255,255,0.22);
 }
+/* ==================================================
+   STORY CAROUSEL - FINAL LAYOUT
+   ================================================== */
+
+
+/* 전체 카드 영역 */
+.story-page .story-content {
+  position: relative;
+
+  height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 78px;
+}
+
+
+/* 실제로 카드가 보이는 창
+   폭을 좁혀서 좌우 카드가 일부만 보이게 함 */
+.story-page .carousel-viewport {
+  width: min(76%, 860px);
+
+  overflow: hidden;
+
+  padding: 42px 0 48px;
+
+  cursor: grab;
+
+  user-select: none;
+}
+
+
+/* 드래그 중 */
+.story-page .carousel-viewport.dragging {
+  cursor: grabbing;
+}
+
+
+/* 카드 줄 */
+.story-page .carousel-track {
+  display: flex;
+  align-items: center;
+
+  /* JS가 24px 기준이라 반드시 유지 */
+  gap: 24px;
+
+  transition:
+    transform 0.72s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ==================================================
+   CARD BASE
+   ================================================== */
+
+.story-page .story-card {
+  flex: 0 0 330px;
+
+  height: 450px;
+
+  padding: 25px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  opacity: 0.48;
+
+  transform: scale(0.79);
+
+  filter:
+    saturate(0.78);
+
+  box-shadow:
+    0 10px 26px
+    rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.55s ease,
+    filter 0.55s ease,
+    box-shadow 0.55s ease;
+}
+
+
+/* 중앙 선택 카드 */
+.story-page .story-card.active {
+  opacity: 1;
+
+  transform: scale(1.06);
+
+  filter:
+    saturate(1);
+
+  z-index: 5;
+
+  box-shadow:
+    0 24px 48px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==================================================
+   CARD TEXT
+   ================================================== */
+
+.story-page .card-number {
+  font-size: 13px;
+
+  font-family:
+    Georgia,
+    serif;
+}
+
+
+.story-page .story-card h2 {
+  margin: 10px 0 12px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 43px;
+
+  line-height: 0.92;
+
+  font-weight: 500;
+}
+
+
+.story-page .story-card p {
+  margin: 0 0 16px;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  color:
+    rgba(40, 40, 40, 0.7);
+}
+
+
+/* ==================================================
+   CARD IMAGE
+   ================================================== */
+
+.story-page .card-image {
+  width: 100%;
+
+  height: 205px;
+
+  margin-top: 15px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+}
+
+
+.story-page .card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.55s ease;
+}
+
+
+.story-page .story-card.active:hover .card-image img {
+  transform: scale(1.025);
+}
+
+
+/* ==================================================
+   MORE BUTTON
+   중앙 카드에만 보이게
+   ================================================== */
+
+.story-page .more-btn {
+  position: absolute;
+
+  left: 24px;
+  bottom: 17px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 9px 17px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.95);
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform: translateY(5px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.story-page .story-card.active .more-btn {
+  opacity: 1;
+
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+
+/* ==================================================
+   ARROWS
+   ================================================== */
+
+.story-page .carousel-btn {
+  position: absolute;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.92);
+
+  color: #111111;
+
+  font-size: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 15;
+
+  box-shadow:
+    0 10px 24px
+    rgba(0,0,0,0.11);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.story-page .carousel-btn:hover {
+  transform:
+    translateY(-50%)
+    scale(1.08);
+
+  box-shadow:
+    0 13px 28px
+    rgba(0,0,0,0.15);
+}
+
+
+.story-page .prev-btn {
+  left: 28px;
+}
+
+
+.story-page .next-btn {
+  right: 28px;
+}
+
+
+/* ==================================================
+   DOTS
+   ================================================== */
+
+.story-page .carousel-dots {
+  position: absolute;
+
+  left: 50%;
+  bottom: 12px;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin: 0;
+
+  z-index: 12;
+}
+
+
+.story-page .dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border:
+    1px solid rgba(20,20,20,0.65);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    width 0.28s ease,
+    background-color 0.28s ease,
+    border-radius 0.28s ease;
+}
+
+
+.story-page .dot.active {
+  width: 18px;
+
+  border-radius: 999px;
+
+  background: #111111;
+}
+
+
+/* ==================================================
+   GUIDE TEXT
+   ================================================== */
+
+.story-page .story-guide {
+  position: absolute;
+
+  right: 35px;
+  bottom: 18px;
+
+  margin: 0;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color:
+    rgba(50,50,50,0.55);
+}
+/* ==========================================
+   STORY THEME BACKGROUND TRANSITION
+   ========================================== */
+
+.story-page {
+  background-image: none;
+
+  background-color: #eee8ff;
+
+  transition:
+    background-color 0.85s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* MacBook 화면 내부도 같이 부드럽게 변함 */
+.story-page .story-laptop {
+  background-color: rgba(238, 232, 255, 0.74);
+
+  transition:
+    background-color 0.85s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
