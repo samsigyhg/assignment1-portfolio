@@ -15,42 +15,104 @@
 
   <div class="detail-frame">
 
-    <!-- macOS Top Bar -->
-    <div class="detail-mac-bar">
+   <div class="mac-bar">
 
-      <div class="detail-mac-left">
-        <span>●</span>
-        <span>●</span>
-        <span>●</span>
+      <div class="mac-left">
 
-        <span class="detail-menu-text">Finder</span>
-        <span class="detail-menu-text">File</span>
-        <span class="detail-menu-text">Edit</span>
-        <span class="detail-menu-text">View</span>
+       <span class="apple-mark"></span>
+
+        <span class="menu-text finder">
+          Finder
+        </span>
+
+        <span class="menu-text">
+          File
+        </span>
+
+        <span class="menu-text">
+          Edit
+        </span>
+
+        <span class="menu-text">
+          View
+        </span>
+
+        <span class="menu-text">
+          Go
+        </span>
+
+        <span class="menu-text">
+          Window
+        </span>
+
+        <span class="menu-text">
+          Help
+        </span>
+
       </div>
 
-      <div class="detail-mac-right">
-        <span>10:24 AM</span>
+
+      <div
+        class="mac-right"
+        aria-label="System status"
+      >
+
+        <span class="status-item wifi">
+          ◔ Wi-Fi
+        </span>
+
+
+        <span class="status-item battery">
+
+          <span class="battery-shell">
+            <span class="battery-level"></span>
+          </span>
+
+          100%
+
+        </span>
+
+
+      <span class="status-item datetime">
+  <span id="korea-date"></span>
+  <span id="korea-clock"></span>
+</span>  
       </div>
+
 
     </div>
 
 
-    <!-- Navigation -->
-    <header class="detail-nav">
+    <!-- Portfolio navigation -->
+    <header class="main-nav">
 
-      <a href="Main.html" class="detail-logo">
-        JM
-      </a>
+      <a href="Main.html" class="logo">
+  <span class="logo-main">H</span>
+  <span class="logo-sub">PORTFOLIO</span>
+</a>
 
       <nav>
-        <a href="About.html">ABOUT</a>
-        <a href="Campus.html" class="active-nav">CAMPUS</a>
-        <a href="Future.html">FUTURE</a>
-        <a href="Gallery.html">GALLERY</a>
+
+        <a href="About.html">
+          ABOUT
+        </a>
+
+        <a href="Campus.html" class="active-nav">
+  CAMPUS
+</a>
+
+        <a href="Future.html">
+          FUTURE
+        </a>
+
+        <a href="Gallery.html">
+          GALLERY
+        </a>
+
       </nav>
 
     </header>
+
 
 
     <!-- Main Content -->
@@ -211,7 +273,76 @@
     </main>
 
   </div>
+<script>
 
+function updateKoreaDateTime() {
+
+  const now = new Date();
+
+
+  const koreaDate =
+    new Intl.DateTimeFormat(
+      "en-US",
+      {
+        timeZone: "Asia/Seoul",
+        weekday: "short",
+        month: "short",
+        day: "numeric"
+      }
+    ).format(now);
+
+
+  const koreaTime =
+    new Intl.DateTimeFormat(
+      "en-US",
+      {
+        timeZone: "Asia/Seoul",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+      }
+    ).format(now);
+
+
+  const dateElement =
+    document.getElementById(
+      "korea-date"
+    );
+
+
+  const clockElement =
+    document.getElementById(
+      "korea-clock"
+    );
+
+
+  if (dateElement) {
+
+    dateElement.textContent =
+      koreaDate;
+
+  }
+
+
+  if (clockElement) {
+
+    clockElement.textContent =
+      koreaTime;
+
+  }
+
+}
+
+
+updateKoreaDateTime();
+
+
+setInterval(
+  updateKoreaDateTime,
+  30000
+);
+
+</script>
 </body>
 
 </html>

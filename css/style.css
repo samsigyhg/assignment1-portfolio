@@ -4615,3 +4615,659 @@ body {
     translateY(0)
     scale(0.97);
 }
+/* ==================================================
+   CAMPUS - HEADER MATCH
+   ================================================== */
+
+
+/* ---------- NAV 전체 ---------- */
+
+.campus-detail-page .detail-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 52px 18px;
+
+  min-height: 82px;
+}
+
+
+/* ---------- H PORTFOLIO ---------- */
+
+.campus-detail-page .detail-logo {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 5px;
+
+  min-width: 90px;
+
+  color: #080808;
+
+  text-decoration: none;
+
+  line-height: 1;
+}
+
+
+.campus-detail-page .detail-logo-main {
+  display: block;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 28px;
+
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.05em;
+}
+
+
+.campus-detail-page .detail-logo-sub {
+  display: block;
+
+  padding-left: 1px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.28em;
+}
+
+
+/* ---------- 오른쪽 NAV ---------- */
+
+.campus-detail-page .detail-nav nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 36px;
+}
+
+
+.campus-detail-page .detail-nav nav a {
+  position: relative;
+
+  color: rgba(17,17,17,0.58);
+
+  text-decoration: none;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.10em;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* 현재 Campus */
+
+.campus-detail-page
+.detail-nav nav
+.active-nav {
+
+  color: #111;
+
+  font-weight: 800;
+}
+
+
+/* 작은 active indicator */
+
+.campus-detail-page
+.detail-nav nav
+.active-nav::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  transform:
+    translateX(-50%);
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #111;
+}
+
+
+.campus-detail-page
+.detail-nav nav a:hover {
+
+  color: #111;
+}
+/* ==================================================
+   CAMPUS HEADER - FINAL POSITION FIX
+   ================================================== */
+
+/* macOS 메뉴바 */
+.campus-detail-page .detail-mac-bar {
+  position: relative !important;
+
+  top: auto !important;
+  left: auto !important;
+
+  width: 100%;
+
+  height: 27px;
+
+  padding: 0 12px;
+
+  margin: 0;
+
+  z-index: 100;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e9ecef 0%,
+      #d9dde1 100%
+    );
+
+  border-bottom:
+    1px solid rgba(0,0,0,0.07);
+}
+
+
+/* H PORTFOLIO + 페이지 메뉴 영역 */
+.campus-detail-page .detail-nav {
+  position: relative !important;
+
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+
+  width: 100%;
+
+  height: 72px;
+  min-height: 72px;
+
+  margin: 0;
+
+  padding: 0 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+
+  z-index: 90;
+}
+
+
+/* H PORTFOLIO */
+.campus-detail-page .detail-logo {
+  position: relative !important;
+
+  top: auto !important;
+  left: auto !important;
+
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 4px;
+
+  text-decoration: none;
+  color: #111;
+}
+
+
+.campus-detail-page .detail-logo-main {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 28px;
+
+  font-weight: 900;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.05em;
+}
+
+
+.campus-detail-page .detail-logo-sub {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.28em;
+
+  padding-left: 1px;
+}
+
+
+/* 오른쪽 ABOUT / CAMPUS / FUTURE / GALLERY */
+.campus-detail-page .detail-nav nav {
+  position: relative !important;
+
+  top: auto !important;
+  right: auto !important;
+
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+
+  margin: 0;
+}
+
+
+.campus-detail-page .detail-nav nav a {
+  position: relative;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 650;
+
+  letter-spacing: 0.08em;
+
+  color: rgba(17,17,17,0.58);
+
+  text-decoration: none;
+
+  transition:
+    color 0.22s ease,
+    opacity 0.22s ease;
+}
+
+
+.campus-detail-page .detail-nav nav a:hover {
+  color: #111;
+}
+
+
+/* 현재 페이지 */
+.campus-detail-page .detail-nav nav .active-nav {
+  color: #111;
+
+  font-weight: 800;
+}
+
+
+.campus-detail-page
+.detail-nav nav
+.active-nav::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  width: 4px;
+  height: 4px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #111;
+}
+/* ==========================================
+   CAMPUS LOGO - FIX
+   ========================================== */
+
+.campus-detail-page .detail-logo {
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+
+  justify-content: center !important;
+
+  gap: 5px !important;
+
+  line-height: 1 !important;
+
+  text-decoration: none !important;
+}
+
+
+.campus-detail-page .detail-logo-main {
+  display: block !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 28px !important;
+
+  font-weight: 900 !important;
+
+  line-height: 0.8 !important;
+
+  letter-spacing: -0.05em !important;
+}
+
+
+.campus-detail-page .detail-logo-sub {
+  display: block !important;
+
+  margin: 0 !important;
+
+  padding-left: 1px !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 7px !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 0.28em !important;
+}
+/* ==================================================
+   CAMPUS HEADER - MATCH MAIN
+   ================================================== */
+
+/* -----------------------------
+   Navigation 전체
+   ----------------------------- */
+
+.campus-detail-page .main-nav {
+  position: relative;
+
+  width: 100%;
+
+  height: 84px;
+
+  padding: 0 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  z-index: 20;
+}
+
+
+/* -----------------------------
+   H + PORTFOLIO
+   ----------------------------- */
+
+.campus-detail-page .main-nav .logo {
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+
+  justify-content: center !important;
+
+  gap: 5px !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  width: auto !important;
+
+  height: auto !important;
+
+  color: #111111 !important;
+
+  text-decoration: none !important;
+
+  line-height: 1 !important;
+}
+
+
+.campus-detail-page .main-nav .logo-main {
+  display: block !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 28px !important;
+
+  font-weight: 900 !important;
+
+  line-height: 0.8 !important;
+
+  letter-spacing: -0.05em !important;
+
+  color: #111111 !important;
+}
+
+
+.campus-detail-page .main-nav .logo-sub {
+  display: block !important;
+
+  margin: 0 !important;
+
+  padding-left: 1px !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 7px !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 0.28em !important;
+
+  color: #111111 !important;
+}
+
+
+/* -----------------------------
+   ABOUT / CAMPUS / FUTURE / GALLERY
+   ----------------------------- */
+
+.campus-detail-page .main-nav nav {
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 34px !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+}
+
+
+.campus-detail-page .main-nav nav a {
+  position: relative;
+
+  display: inline-block;
+
+  color:
+    rgba(17,17,17,0.62) !important;
+
+  text-decoration: none !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 10px !important;
+
+  font-weight: 650 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 0.10em !important;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.campus-detail-page
+.main-nav nav a:hover {
+  color: #111111 !important;
+}
+
+
+/* 현재 Campus */
+.campus-detail-page
+.main-nav nav a.active-nav,
+.campus-detail-page
+.main-nav nav a[href="Campus.html"] {
+
+  color: #111111 !important;
+
+  font-weight: 800 !important;
+}
+
+
+/* 현재 페이지 아래 작은 점 */
+.campus-detail-page
+.main-nav nav a[href="Campus.html"]::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -9px;
+
+  width: 4px;
+
+  height: 4px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #111111;
+}
+/* ==========================================
+   CAMPUS MAC BAR - FINAL COLORS
+   ========================================== */
+
+.campus-detail-page .mac-left {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #111111 !important;
+}
+
+
+/* Apple logo */
+.campus-detail-page .apple-mark {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 12px;
+
+  margin-right: 1px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  color: #111111 !important;
+
+  line-height: 1;
+}
+
+
+/* Finder / File / Edit / View / Go / Window / Help */
+.campus-detail-page .menu-text {
+  color: #111111 !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+/* Finder만 아주 살짝 강조 */
+.campus-detail-page .menu-text.finder {
+  color: #111111 !important;
+
+  font-weight: 700;
+}
