@@ -8,6 +8,9 @@
   <title>My Future</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <style>
+
+</style>
 </head>
 
 
@@ -15,208 +18,616 @@
 
   <div class="detail-frame">
 
-    <!-- macOS Top Bar -->
-    <div class="detail-mac-bar">
+    <!-- macOS top bar -->
+<div class="mac-bar">
 
-      <div class="detail-mac-left">
-        <span>●</span>
-        <span>●</span>
-        <span>●</span>
+  <div class="mac-left">
 
-        <span class="detail-menu-text">Finder</span>
-        <span class="detail-menu-text">File</span>
-        <span class="detail-menu-text">Edit</span>
-        <span class="detail-menu-text">View</span>
-      </div>
+    <span class="apple-mark"></span>
 
-      <div class="detail-mac-right">
-        <span>10:24 AM</span>
-      </div>
+    <span class="menu-text finder">
+      Finder
+    </span>
+
+    <span class="menu-text">
+      File
+    </span>
+
+    <span class="menu-text">
+      Edit
+    </span>
+
+    <span class="menu-text">
+      View
+    </span>
+
+    <span class="menu-text">
+      Go
+    </span>
+
+    <span class="menu-text">
+      Window
+    </span>
+
+    <span class="menu-text">
+      Help
+    </span>
+
+  </div>
+
+
+  <div
+    class="mac-right"
+    aria-label="System status"
+  >
+
+    <span class="status-item wifi">
+      ◔ Wi-Fi
+    </span>
+
+
+    <span class="status-item battery">
+
+      <span class="battery-shell">
+        <span class="battery-level"></span>
+      </span>
+
+      100%
+
+    </span>
+
+
+    <span class="status-item datetime">
+      <span id="korea-date"></span>
+      <span id="korea-clock"></span>
+    </span>
+
+  </div>
+
+
+
+
+    <!-- Navigation -->
+    <!-- Portfolio Navigation -->
+<header class="main-nav">
+
+  <a
+    href="Main.html"
+    class="logo">
+
+    <span class="logo-main">
+      H
+    </span>
+
+    <span class="logo-sub">
+      PORTFOLIO
+    </span>
+
+  </a>
+
+
+  <nav>
+
+    <a href="About.html">
+      ABOUT
+    </a>
+
+    <a href="Campus.html">
+      CAMPUS
+    </a>
+
+    <a
+      href="Future.html"
+      class="active-nav">
+
+      FUTURE
+
+    </a>
+
+    <a href="Gallery.html">
+      GALLERY
+    </a>
+
+  </nav>
+
+</header>
+
+
+    <!-- Main Content -->
+    <main class="future-calendar">
+
+  <!-- Calendar Header -->
+  <section class="future-calendar-header">
+
+    <div class="future-calendar-heading">
+
+      <span class="future-calendar-label">
+        FUTURE CALENDAR
+      </span>
+
+      <h1>
+        Where I Want<br>
+        to Go.
+      </h1>
 
     </div>
 
 
-    <!-- Navigation -->
-    <header class="detail-nav">
+    <div class="future-calendar-info">
 
-      <a href="Main.html" class="detail-logo">
-        JM
-      </a>
+      <span>
+        MY FUTURE PLAN
+      </span>
 
-      <nav>
-        <a href="About.html">ABOUT</a>
-        <a href="Campus.html">CAMPUS</a>
-        <a href="Future.html" class="active-nav">FUTURE</a>
-        <a href="Gallery.html">GALLERY</a>
-      </nav>
+      <span>
+        04 GOALS
+      </span>
 
-    </header>
+    </div>
+
+  </section>
 
 
-    <!-- Main Content -->
-    <main class="future-detail-content">
+  <!-- Year Selector -->
+  <section class="future-year-section">
 
-      <!-- Intro -->
-      <section class="future-intro">
+    <div class="future-year-line"></div>
 
-        <div class="future-intro-text">
+    <div class="future-year-list">
 
-          <span class="detail-number">
-            03
-          </span>
+      <button
+        class="future-year-card"
+        data-year="2027"
+        type="button"
+      >
 
-          <h1>
-            What's<br>
-            Next?
-          </h1>
+        <span class="future-year-number">
+          2027
+        </span>
 
-          <p class="future-description">
-            졸업 후에는 대학생활 동안 쌓은 경험과
-            배운 내용을 바탕으로 제가 좋아하면서도
-            잘할 수 있는 분야에서 일하고 싶습니다.
+        <span class="future-year-title">
+          Graduation
+        </span>
 
-            새로운 경험을 계속 쌓으며,
-            저만의 전문성과 방향을 만들어 가는 것이 목표입니다.
-          </p>
+        <span class="future-year-arrow">
+          →
+        </span>
 
-        </div>
-
-
-        <!-- Future Image -->
-        <div class="future-photo">
-
-          <img
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
-            alt="Future journey"
-          >
-
-        </div>
-
-      </section>
+      </button>
 
 
-      <!-- Timeline -->
-      <section class="future-plan">
+      <button
+        class="future-year-card"
+        data-year="2028-2030"
+        type="button"
+      >
 
-        <div class="future-plan-title">
+        <span class="future-year-number">
+          2028–2030
+        </span>
 
-          <span class="small-label">
-            MY ROADMAP
-          </span>
+        <span class="future-year-title">
+          Career
+        </span>
 
-          <h2>
-            From Now<br>
-            to My Future.
-          </h2>
+        <span class="future-year-arrow">
+          →
+        </span>
 
-        </div>
-
-
-        <div class="timeline">
-
-          <!-- NOW -->
-          <article class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <span class="timeline-year">
-              NOW
-            </span>
-
-            <h3>
-              University Life
-            </h3>
-
-            <p>
-              전공 지식을 배우고 다양한 활동과
-              경험을 통해 관심 분야를 찾아갑니다.
-            </p>
-
-          </article>
+      </button>
 
 
-          <!-- SHORT TERM -->
-          <article class="timeline-item">
+      <button
+        class="future-year-card"
+        data-year="2030+"
+        type="button"
+      >
 
-            <div class="timeline-dot"></div>
+        <span class="future-year-number">
+          2030+
+        </span>
 
-            <span class="timeline-year">
-              SHORT TERM
-            </span>
+        <span class="future-year-title">
+          Experience
+        </span>
 
-            <h3>
-              Build Experience
-            </h3>
+        <span class="future-year-arrow">
+          →
+        </span>
 
-            <p>
-              프로젝트와 새로운 활동에 참여하면서
-              실제 경험과 실력을 쌓고 싶습니다.
-            </p>
-
-          </article>
-
-
-          <!-- GRADUATION -->
-          <article class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <span class="timeline-year">
-              GRADUATION
-            </span>
-
-            <h3>
-              Start My Career
-            </h3>
-
-            <p>
-              제가 좋아하는 분야와 잘할 수 있는 분야가
-              만나는 일을 찾아 사회에 첫발을 내딛고 싶습니다.
-            </p>
-
-          </article>
+      </button>
 
 
-          <!-- FUTURE -->
-          <article class="timeline-item">
+      <button
+        class="future-year-card"
+        data-year="long-term"
+        type="button"
+      >
 
-            <div class="timeline-dot"></div>
+        <span class="future-year-number">
+          LONG TERM
+        </span>
 
-            <span class="timeline-year">
-              FUTURE
-            </span>
+        <span class="future-year-title">
+          My Vision
+        </span>
 
-            <h3>
-              Keep Growing
-            </h3>
+        <span class="future-year-arrow">
+          →
+        </span>
 
-            <p>
-              한 분야에 머무르지 않고 꾸준히 배우며
-              저만의 전문성과 경험을 만들어 가고 싶습니다.
-            </p>
+      </button>
 
-          </article>
+    </div>
 
-        </div>
-
-      </section>
+  </section>
 
 
-      <!-- Back -->
-      <div class="back-area">
+  <!-- Goal Memo -->
+  <section
+    class="future-goal-panel"
+    id="future-goal-panel"
+  >
 
-        <a
-          href="Story.html"
-          class="back-btn"
+    <button
+      class="future-goal-close"
+      id="future-goal-close"
+      type="button"
+      aria-label="Close goal"
+    >
+      ×
+    </button>
+
+
+    <div class="future-goal-top">
+
+      <div>
+
+        <span
+          class="future-goal-period"
+          id="future-goal-period"
         >
-          ← BACK TO STORY
-        </a>
+        </span>
+
+        <h2
+          id="future-goal-title"
+        >
+        </h2>
 
       </div>
 
-    </main>
+
+      <span class="future-goal-label">
+        MY GOAL
+      </span>
+
+    </div>
+
+
+    <div
+      class="future-goal-content"
+      id="future-goal-content"
+    >
+    </div>
+
+
+    <div class="future-goal-footer">
+
+      <span>
+        FUTURE PLAN
+      </span>
+
+      <span>
+        SELECT ANOTHER YEAR →
+      </span>
+
+    </div>
+
+  </section>
+
+
+  <!-- Back -->
+  <div class="future-back-area">
+
+    <a
+      href="Story.html"
+      class="future-back-btn"
+    >
+      ← BACK TO STORY
+    </a>
 
   </div>
+
+</main>
+
+  </div>
+<script>
+  function updateKoreaDateTime() {
+
+    const now = new Date();
+
+    const koreaDate =
+      new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Seoul",
+        weekday: "short",
+        month: "short",
+        day: "numeric"
+      }).format(now);
+
+    const koreaTime =
+      new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Seoul",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+      }).format(now);
+
+    const dateElement =
+      document.getElementById("korea-date");
+
+    const clockElement =
+      document.getElementById("korea-clock");
+
+    if (dateElement) {
+      dateElement.textContent =
+        koreaDate;
+    }
+
+    if (clockElement) {
+      clockElement.textContent =
+        koreaTime;
+    }
+  }
+
+  updateKoreaDateTime();
+
+  setInterval(
+    updateKoreaDateTime,
+    30000
+  );
+</script>
+<script>
+  const futureGoals = {
+
+    "2027": {
+
+      period:
+        "2027 · GRADUATION",
+
+      title:
+        "Graduate & Begin",
+
+      content: `
+        <p>
+          대학 졸업 후에는 지금까지 배운 전공 지식과
+          대학생활에서 쌓은 경험을 바탕으로
+          제가 관심 있는 분야에서 첫걸음을 시작하고 싶습니다.
+        </p>
+
+        <p>
+          졸업 자체를 끝이라고 생각하기보다,
+          앞으로 어떤 분야에서 성장할 수 있을지
+          직접 경험하며 방향을 찾고 싶습니다.
+        </p>
+      `
+
+    },
+
+
+    "2028-2030": {
+
+      period:
+        "2028–2030 · CAREER",
+
+      title:
+        "Build My Career",
+
+      content: `
+        <p>
+          제가 좋아하는 분야와 잘할 수 있는 분야가
+          만나는 일을 찾고, 실제 업무 경험을 통해
+          저만의 전문성을 만들어 가고 싶습니다.
+        </p>
+
+        <p>
+          프로젝트와 실무 경험을 꾸준히 쌓으면서
+          하나의 분야에서 신뢰받을 수 있는 사람이 되는 것이 목표입니다.
+        </p>
+      `
+
+    },
+
+
+    "2030+": {
+
+      period:
+        "2030+ · EXPERIENCE",
+
+      title:
+        "See More, Experience More",
+
+      content: `
+        <p>
+          한 곳에만 머무르지 않고 새로운 환경과
+          사람들을 계속 만나면서 시야를 넓히고 싶습니다.
+        </p>
+
+        <p>
+          졸업 후 해외에서 일하면서 다양한 문화와 사회를 접해보고 싶습니다. 특히 스페인어권이나 영어권에서 일해보고 싶은데, 
+          그 이유는 스페인어와 영어를 잘하지는 않지만 그 쪽 문화 사람들과 이야기 하는 것을 좋아하고, 양쪽 언어의 시장이 우리
+          나라와 비교도 무색할만큼 크기 때문입니다.
+        </p>
+      `
+
+    },
+
+
+    "long-term": {
+
+      period:
+        "LONG TERM · MY VISION",
+
+      title:
+        "Keep Growing",
+
+      content: `
+        <p>
+          장기적으로는 제가 좋아하는 일을 꾸준히 이어가면서
+          동시에 새로운 것을 배우는 사람으로 성장하고 싶습니다.
+        </p>
+
+        <p>
+          
+          궁극적으로는 다양하게 배운 지식을 통해 창업을 하는 것이 궁극적인 목표입니다
+          금융 계열, ai 계열에 관한 사업 아이템을 발굴하거나 혹은 이런 분야의 스타트업들을 컨설팅
+          해주는 일도 해보고 싶습니다.
+        </p>
+      `
+
+    }
+
+  };
+
+
+  const yearCards =
+    document.querySelectorAll(
+      ".future-year-card"
+    );
+
+
+  const goalPanel =
+    document.getElementById(
+      "future-goal-panel"
+    );
+
+
+  const goalPeriod =
+    document.getElementById(
+      "future-goal-period"
+    );
+
+
+  const goalTitle =
+    document.getElementById(
+      "future-goal-title"
+    );
+
+
+  const goalContent =
+    document.getElementById(
+      "future-goal-content"
+    );
+
+
+  const closeGoal =
+    document.getElementById(
+      "future-goal-close"
+    );
+
+
+  yearCards.forEach(function(card) {
+
+    card.addEventListener(
+      "click",
+      function() {
+
+        const selectedYear =
+          card.dataset.year;
+
+        const goal =
+          futureGoals[selectedYear];
+
+        if (!goal) {
+          return;
+        }
+
+
+        yearCards.forEach(
+          function(otherCard) {
+
+            otherCard.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+
+        card.classList.add(
+          "active"
+        );
+
+
+        goalPeriod.textContent =
+          goal.period;
+
+
+        goalTitle.textContent =
+          goal.title;
+
+
+        goalContent.innerHTML =
+          goal.content;
+
+
+        goalPanel.classList.remove(
+          "visible"
+        );
+
+
+        void goalPanel.offsetWidth;
+
+
+        goalPanel.classList.add(
+          "visible"
+        );
+
+
+        setTimeout(
+          function() {
+
+            goalPanel.scrollIntoView({
+              behavior:
+                "smooth",
+
+              block:
+                "nearest"
+
+            });
+
+          },
+          50
+        );
+
+      }
+    );
+
+  });
+
+
+  closeGoal.addEventListener(
+    "click",
+    function() {
+
+      goalPanel.classList.remove(
+        "visible"
+      );
+
+
+      yearCards.forEach(
+        function(card) {
+
+          card.classList.remove(
+            "active"
+          );
+
+        }
+      );
+
+    }
+  );
+</script>
+
 
 </body>
 

@@ -15,42 +15,123 @@
 
   <div class="detail-frame">
 
-    <!-- macOS Top Bar -->
-    <div class="detail-mac-bar">
+    <!-- macOS top bar -->
+<div class="mac-bar">
 
-      <div class="detail-mac-left">
-        <span>●</span>
-        <span>●</span>
-        <span>●</span>
+  <div class="mac-left">
 
-        <span class="detail-menu-text">Finder</span>
-        <span class="detail-menu-text">File</span>
-        <span class="detail-menu-text">Edit</span>
-        <span class="detail-menu-text">View</span>
-      </div>
+    <span class="apple-mark"></span>
 
-      <div class="detail-mac-right">
-        <span>10:24 AM</span>
-      </div>
+    <span class="menu-text finder">
+      Finder
+    </span>
 
-    </div>
+    <span class="menu-text">
+      File
+    </span>
+
+    <span class="menu-text">
+      Edit
+    </span>
+
+    <span class="menu-text">
+      View
+    </span>
+
+    <span class="menu-text">
+      Go
+    </span>
+
+    <span class="menu-text">
+      Window
+    </span>
+
+    <span class="menu-text">
+      Help
+    </span>
+
+  </div>
+
+
+  <div
+    class="mac-right"
+    aria-label="System status"
+  >
+
+    <span class="status-item wifi">
+      ◔ Wi-Fi
+    </span>
+
+
+    <span class="status-item battery">
+
+      <span class="battery-shell">
+        <span class="battery-level"></span>
+      </span>
+
+      100%
+
+    </span>
+
+
+    <span class="status-item datetime">
+
+      <span id="korea-date"></span>
+      <span id="korea-clock"></span>
+
+    </span>
+
+  </div>
+
+</div>
+
+
 
 
     <!-- Navigation -->
-    <header class="detail-nav">
+    <!-- Portfolio Navigation -->
+<header class="main-nav">
 
-      <a href="Main.html" class="detail-logo">
-        JM
-      </a>
+  <a
+    href="Main.html"
+    class="logo"
+  >
 
-      <nav>
-        <a href="About.html">ABOUT</a>
-        <a href="Campus.html">CAMPUS</a>
-        <a href="Future.html">FUTURE</a>
-        <a href="Gallery.html" class="active-nav">GALLERY</a>
-      </nav>
+    <span class="logo-main">
+      H
+    </span>
 
-    </header>
+    <span class="logo-sub">
+      PORTFOLIO
+    </span>
+
+  </a>
+
+
+  <nav>
+
+    <a href="About.html">
+      ABOUT
+    </a>
+
+    <a href="Campus.html">
+      CAMPUS
+    </a>
+
+    <a href="Future.html">
+      FUTURE
+    </a>
+
+    <a
+      href="Gallery.html"
+      class="active-nav"
+    >
+      GALLERY
+    </a>
+
+  </nav>
+
+</header>
 
 
     <!-- Main Content -->
@@ -73,109 +154,73 @@
           <p class="gallery-description">
             일상 속에서 기억하고 싶은 순간들과
             제가 좋아하는 것들을 사진으로 모아 보았습니다.
-            여행, 대학생활, 취미와 관심사 등
-            저를 조금 더 보여주는 공간입니다.
+            
           </p>
 
         </div>
 
       </section>
 
+<section class="gallery-grid">
 
-      <!-- Gallery Grid -->
-      <section class="gallery-grid">
-
-        <!-- PHOTO 01 -->
-        <figure class="gallery-item gallery-large">
-
-          <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-            alt="Ocean sunset"
-          >
-
-          <figcaption>
-            Travel
-          </figcaption>
-
-        </figure>
+  <figure class="gallery-item gallery-me">
 
 
-        <!-- PHOTO 02 -->
-        <figure class="gallery-item">
+    <img
+      src="https://raw.githubusercontent.com/samsigyhg/assignment1/49f687d447d579fb0600991e476ab6569f45dc31/Gallery%20photo2.png"
+      alt="Me"
+    >
 
-          <img
-            src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000"
-            alt="City"
-          >
+    <figcaption>
+      Me
+    </figcaption>
 
-          <figcaption>
-            City
-          </figcaption>
-
-        </figure>
+  </figure>
 
 
-        <!-- PHOTO 03 -->
-        <figure class="gallery-item">
+  <figure class="gallery-item gallery-me">
 
-          <img
-            src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131"
-            alt="Cat"
-          >
+    <img
+      src="https://raw.githubusercontent.com/samsigyhg/assignment1/49f687d447d579fb0600991e476ab6569f45dc31/Gallery%20photo3.jpeg"
+      alt="Inspiration"
+    >
 
-          <figcaption>
-            Favorite
-          </figcaption>
+    <figcaption>
+      Inspiration
+    </figcaption>
 
-        </figure>
-
-
-        <!-- PHOTO 04 -->
-        <figure class="gallery-item">
-
-          <img
-            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
-            alt="Coffee"
-          >
-
-          <figcaption>
-            Daily Life
-          </figcaption>
-
-        </figure>
+  </figure>
 
 
-        <!-- PHOTO 05 -->
-        <figure class="gallery-item gallery-wide">
+  <figure class="gallery-item">
 
-          <img
-            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
-            alt="Nature"
-          >
+    <img
+      src="https://raw.githubusercontent.com/samsigyhg/assignment1/49f687d447d579fb0600991e476ab6569f45dc31/Gallery%20photo4.png"
+      alt="Experience"
+    >
 
-          <figcaption>
-            New Experience
-          </figcaption>
+    <figcaption>
+      Experience
+    </figcaption>
 
-        </figure>
+  </figure>
 
 
-        <!-- PHOTO 06 -->
-        <figure class="gallery-item">
+  <figure class="gallery-item">
 
-          <img
-            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80"
-            alt="University"
-          >
+    <img
+      src="https://raw.githubusercontent.com/samsigyhg/assignment1/49f687d447d579fb0600991e476ab6569f45dc31/Gallery%20photo5.jpeg"
+      alt="Beer"
+    >
 
-          <figcaption>
-            Campus
-          </figcaption>
+    <figcaption>
+      Beer
+    </figcaption>
 
-        </figure>
+  </figure>
 
-      </section>
-
+</section>
+      
 
       <!-- Back -->
       <div class="back-area">
@@ -192,7 +237,41 @@
     </main>
 
   </div>
+<script>
+function updateKoreaDateTime() {
 
+  const now = new Date();
+
+  const koreaDate =
+    new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Seoul",
+      weekday: "short",
+      month: "short",
+      day: "numeric"
+    }).format(now);
+
+  const koreaTime =
+    new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Seoul",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true
+    }).format(now);
+
+  document.getElementById("korea-date").textContent =
+    koreaDate;
+
+  document.getElementById("korea-clock").textContent =
+    koreaTime;
+}
+
+updateKoreaDateTime();
+
+setInterval(
+  updateKoreaDateTime,
+  30000
+);
+</script>
 </body>
 
 </html>

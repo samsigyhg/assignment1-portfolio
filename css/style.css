@@ -900,12 +900,12 @@ body {
    MAIN PAGE - REFERENCE MATCH
    ========================================== */
 
-/* 새로 준 코드 전부 */
+/* �덈줈 以� 肄붾뱶 �꾨� */
 /* ==========================================
    MAIN PAGE - FINAL MACBOOK SHELL
    ========================================== */
 
-/* 바깥 배경 */
+/* 諛붽묑 諛곌꼍 */
 .main-page {
   background: #e1e3e5;
 
@@ -937,7 +937,7 @@ body {
 }
 
 
-/* 기존 안쪽 highlight 제거 */
+/* 湲곗〈 �덉そ highlight �쒓굅 */
 .main-page .laptop::before {
   display: none;
 }
@@ -973,7 +973,7 @@ body {
 }
 
 
-/* 왼쪽 메뉴 */
+/* �쇱そ 硫붾돱 */
 .main-page .mac-left {
   display: flex;
 
@@ -983,7 +983,7 @@ body {
 }
 
 
-/* 왼쪽 작은 아이콘 */
+/* �쇱そ �묒� �꾩씠肄� */
 .main-page .apple-mark {
   color: #111111;
 
@@ -1012,7 +1012,7 @@ body {
 }
 
 
-/* 오른쪽 상태 표시 */
+/* �ㅻⅨ履� �곹깭 �쒖떆 */
 .main-page .mac-right {
   display: flex;
 
@@ -1040,7 +1040,7 @@ body {
 }
 
 
-/* 배터리 */
+/* 諛고꽣由� */
 .main-page .battery-shell {
   width: 15px;
   height: 7px;
@@ -1145,7 +1145,7 @@ body {
 }
 
 
-/* 가운데 MacBook 홈 */
+/* 媛��대뜲 MacBook �� */
 .main-page .macbook-base::before {
   top: 0;
 
@@ -1165,7 +1165,7 @@ body {
 }
 
 
-/* 아래 그림자 */
+/* �꾨옒 洹몃┝�� */
 .main-page .macbook-base::after {
   bottom: -8px;
 
@@ -1181,7 +1181,7 @@ body {
 }
 
 
-/* 기존 notch 제거 */
+/* 湲곗〈 notch �쒓굅 */
 .main-page .base-notch {
   display: none;
 }
@@ -1449,7 +1449,7 @@ body {
 }
 
 
-/* 현재 선택된 카드 */
+/* �꾩옱 �좏깮�� 移대뱶 */
 
 .story-card.active {
 
@@ -1466,7 +1466,7 @@ body {
 }
 
 
-/* 카드별 색 */
+/* 移대뱶蹂� �� */
 
 .about-card {
   background:
@@ -1508,7 +1508,7 @@ body {
 }
 
 
-/* 카드 텍스트 */
+/* 移대뱶 �띿뒪�� */
 
 .card-number {
 
@@ -1557,7 +1557,7 @@ body {
 }
 
 
-/* 카드 이미지 */
+/* 移대뱶 �대�吏� */
 
 .card-image {
 
@@ -1658,7 +1658,7 @@ body {
 }
 
 
-/* 중앙 카드에서만 More 표시 */
+/* 以묒븰 移대뱶�먯꽌留� More �쒖떆 */
 
 .story-card.active
 .more-btn {
@@ -2354,337 +2354,9 @@ body {
   }
 
 }
-/* ==========================================
-   CAMPUS DETAIL PAGE
-   ========================================== */
 
-.campus-detail-page {
 
-  margin: 0;
-
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 50px 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      #e4f1df,
-      #cce5c5
-    );
-}
-
-
-/* ==========================================
-   CAMPUS CONTENT
-   ========================================== */
-
-.campus-detail-content {
-
-  padding:
-    25px 70px 60px;
-}
-
-
-/* ==========================================
-   CAMPUS INTRO
-   ========================================== */
-
-.campus-intro {
-
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 80px;
-
-  align-items: center;
-
-  padding-bottom: 70px;
-}
-
-
-.campus-intro h1 {
-
-  margin:
-    10px 0 30px;
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size:
-    clamp(
-      70px,
-      8vw,
-      120px
-    );
-
-  line-height:
-    0.85;
-
-  font-weight: 500;
-
-  color:
-    #18351d;
-}
-
-
-.campus-description {
-
-  max-width: 480px;
-
-  font-size: 15px;
-
-  line-height: 1.9;
-
-  color: #4c5d4d;
-}
-
-
-/* ==========================================
-   CAMPUS PHOTO
-   ========================================== */
-
-.campus-photo {
-
-  height: 480px;
-
-  overflow: hidden;
-
-  border-radius:
-    45% 45% 45% 12%;
-}
-
-
-.campus-photo img {
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition:
-    transform 0.7s ease;
-}
-
-
-.campus-photo:hover img {
-
-  transform:
-    scale(1.04);
-}
-
-
-/* ==========================================
-   CAMPUS CHALLENGES
-   ========================================== */
-
-.campus-challenges {
-
-  display: grid;
-
-  grid-template-columns:
-    0.8fr 1.6fr;
-
-  gap: 70px;
-
-  padding-top: 70px;
-
-  border-top:
-    1px solid #c8d2c6;
-}
-
-
-.small-label {
-
-  font-size: 10px;
-
-  font-weight: bold;
-
-  letter-spacing: 0.15em;
-
-  color: #718071;
-}
-
-
-.campus-title-area h2 {
-
-  margin:
-    15px 0 0;
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size: 52px;
-
-  line-height: 0.95;
-
-  font-weight: 500;
-
-  color: #18351d;
-}
-
-
-/* ==========================================
-   CHALLENGE GRID
-   ========================================== */
-
-.challenge-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:
-    18px;
-}
-
-
-.challenge-card {
-
-  min-height: 220px;
-
-  padding: 26px;
-
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.45
-    );
-
-  border:
-    1px solid
-    rgba(
-      80,
-      110,
-      80,
-      0.15
-    );
-
-  border-radius: 16px;
-
-  transition:
-    transform 0.35s ease,
-    background-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-
-.challenge-card:hover {
-
-  transform:
-    translateY(-6px);
-
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.75
-    );
-
-  box-shadow:
-    0 16px 35px
-    rgba(
-      40,
-      70,
-      40,
-      0.10
-    );
-}
-
-
-.challenge-number {
-
-  font-size: 11px;
-
-  color:
-    #7c8e7a;
-}
-
-
-.challenge-card h3 {
-
-  margin:
-    15px 0 12px;
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size: 28px;
-
-  font-weight: 500;
-
-  color:
-    #203c24;
-}
-
-
-.challenge-card p {
-
-  margin: 0;
-
-  font-size: 13px;
-
-  line-height: 1.7;
-
-  color:
-    #566457;
-}
-
-
-/* ==========================================
-   CAMPUS RESPONSIVE
-   ========================================== */
-
-@media (max-width: 850px) {
-
-  .campus-intro {
-
-    grid-template-columns:
-      1fr;
-  }
-
-
-  .campus-photo {
-
-    height: 380px;
-  }
-
-
-  .campus-challenges {
-
-    grid-template-columns:
-      1fr;
-  }
-
-
-  .challenge-grid {
-
-    grid-template-columns:
-      1fr;
-  }
-
-
-  .campus-detail-content {
-
-    padding:
-      25px 30px 50px;
-  }
-
-}
-/* ABOUT 페이지 전용 배경 */
+/* ABOUT �섏씠吏� �꾩슜 諛곌꼍 */
 .about-detail-page .detail-frame {
   background:
     linear-gradient(
@@ -2694,651 +2366,13 @@ body {
       #e3d8ff 100%
     );
 }
-/* CAMPUS 상세 페이지 배경 */
-.campus-detail-page .detail-frame {
-  background:
-    linear-gradient(
-      135deg,
-      #f4faF1 0%,
-      #e4f1df 50%,
-      #d1e8ca 100%
-    );
-}
+
 /* ==========================================
    FUTURE DETAIL PAGE
    ========================================== */
 
-.future-detail-page {
 
-  margin: 0;
 
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 50px 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      #fff0e7,
-      #ffd8c4
-    );
-}
-
-
-/* 상세 페이지 내부도 살구색으로 연결 */
-
-.future-detail-page .detail-frame {
-
-  background:
-    linear-gradient(
-      135deg,
-      #fff8f3 0%,
-      #ffe5d6 50%,
-      #ffd3bc 100%
-    );
-}
-
-
-/* ==========================================
-   FUTURE CONTENT
-   ========================================== */
-
-.future-detail-content {
-
-  padding:
-    25px 70px 60px;
-}
-
-
-/* ==========================================
-   FUTURE INTRO
-   ========================================== */
-
-.future-intro {
-
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 80px;
-
-  align-items: center;
-
-  padding-bottom: 70px;
-}
-
-
-.future-intro h1 {
-
-  margin:
-    10px 0 30px;
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size:
-    clamp(
-      70px,
-      8vw,
-      120px
-    );
-
-  line-height:
-    0.85;
-
-  font-weight:
-    500;
-
-  color:
-    #9c4326;
-}
-
-
-.future-description {
-
-  max-width: 480px;
-
-  white-space: pre-line;
-
-  font-size: 15px;
-
-  line-height: 1.9;
-
-  color:
-    #6f5147;
-}
-
-
-/* ==========================================
-   FUTURE PHOTO
-   ========================================== */
-
-.future-photo {
-
-  height: 480px;
-
-  overflow: hidden;
-
-  border-radius:
-    12% 45% 45% 45%;
-}
-
-
-.future-photo img {
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition:
-    transform 0.7s ease;
-}
-
-
-.future-photo:hover img {
-
-  transform:
-    scale(1.04);
-}
-
-
-/* ==========================================
-   FUTURE PLAN
-   ========================================== */
-
-.future-plan {
-
-  padding-top: 70px;
-
-  border-top:
-    1px solid
-    #e1c2b3;
-}
-
-
-.future-plan-title {
-
-  margin-bottom: 70px;
-}
-
-
-.future-plan-title h2 {
-
-  margin:
-    15px 0 0;
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size:
-    52px;
-
-  line-height:
-    0.95;
-
-  font-weight:
-    500;
-
-  color:
-    #9c4326;
-}
-
-
-/* ==========================================
-   TIMELINE
-   ========================================== */
-
-.timeline {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  position: relative;
-
-  gap: 30px;
-}
-
-
-/* Timeline 가로선 */
-
-.timeline::before {
-
-  content: "";
-
-  position: absolute;
-
-  top: 8px;
-
-  left: 0;
-  right: 0;
-
-  height: 1px;
-
-  background:
-    #c98568;
-}
-
-
-.timeline-item {
-
-  position: relative;
-
-  padding-top: 40px;
-}
-
-
-.timeline-dot {
-
-  width: 16px;
-  height: 16px;
-
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  border-radius: 50%;
-
-  background:
-    #c66b47;
-
-  border:
-    4px solid
-    #ffe5d6;
-
-  z-index: 2;
-}
-
-
-.timeline-year {
-
-  font-size: 10px;
-
-  font-weight: bold;
-
-  letter-spacing:
-    0.12em;
-
-  color:
-    #ad6548;
-}
-
-
-.timeline-item h3 {
-
-  margin:
-    12px 0;
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size:
-    26px;
-
-  font-weight: 500;
-
-  color:
-    #8f4025;
-}
-
-
-.timeline-item p {
-
-  margin: 0;
-
-  max-width: 230px;
-
-  font-size: 13px;
-
-  line-height: 1.7;
-
-  color:
-    #755c53;
-}
-
-
-/* ==========================================
-   FUTURE RESPONSIVE
-   ========================================== */
-
-@media (max-width: 850px) {
-
-  .future-intro {
-
-    grid-template-columns:
-      1fr;
-  }
-
-
-  .future-photo {
-
-    height: 380px;
-  }
-
-
-  .timeline {
-
-    grid-template-columns:
-      1fr;
-
-    gap: 45px;
-
-    padding-left: 20px;
-  }
-
-
-  .timeline::before {
-
-    top: 0;
-
-    bottom: 0;
-
-    left: 7px;
-
-    width: 1px;
-
-    height: auto;
-  }
-
-
-  .timeline-item {
-
-    padding:
-      0 0 0 30px;
-  }
-
-
-  .timeline-dot {
-
-    left: -20px;
-  }
-
-
-  .future-detail-content {
-
-    padding:
-      25px 30px 50px;
-  }
-
-}
-/* ==========================================
-   GALLERY DETAIL PAGE
-   ========================================== */
-
-.gallery-detail-page {
-
-  margin: 0;
-
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 50px 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      #edf4ff,
-      #cfe0ff
-    );
-}
-
-
-/* 내부 frame도 파란 계열 */
-
-.gallery-detail-page .detail-frame {
-
-  background:
-    linear-gradient(
-      135deg,
-      #f8fbff 0%,
-      #e1ecff 50%,
-      #cddfff 100%
-    );
-}
-
-
-/* ==========================================
-   GALLERY CONTENT
-   ========================================== */
-
-.gallery-detail-content {
-
-  padding:
-    25px 70px 60px;
-}
-
-
-/* ==========================================
-   GALLERY INTRO
-   ========================================== */
-
-.gallery-intro {
-
-  max-width: 650px;
-
-  margin-bottom: 60px;
-}
-
-
-.gallery-intro h1 {
-
-  margin:
-    10px 0 28px;
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size:
-    clamp(
-      70px,
-      8vw,
-      120px
-    );
-
-  line-height:
-    0.85;
-
-  font-weight:
-    500;
-
-  color:
-    #29558c;
-}
-
-
-.gallery-description {
-
-  max-width: 500px;
-
-  font-size: 15px;
-
-  line-height: 1.9;
-
-  color:
-    #56697c;
-}
-
-
-/* ==========================================
-   GALLERY GRID
-   ========================================== */
-
-.gallery-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  grid-auto-rows:
-    260px;
-
-  gap:
-    18px;
-}
-
-
-/* 공통 사진 */
-
-.gallery-item {
-
-  margin: 0;
-
-  position: relative;
-
-  overflow: hidden;
-
-  border-radius: 18px;
-
-  background:
-    rgba(255,255,255,0.4);
-
-  box-shadow:
-    0 12px 30px
-    rgba(60, 90, 130, 0.10);
-}
-
-
-.gallery-item img {
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-  transition:
-    transform 0.6s ease,
-    filter 0.6s ease;
-}
-
-
-/* hover */
-
-.gallery-item:hover img {
-
-  transform:
-    scale(1.06);
-
-  filter:
-    brightness(0.85);
-}
-
-
-/* 사진 설명 */
-
-.gallery-item figcaption {
-
-  position: absolute;
-
-  left: 18px;
-  bottom: 16px;
-
-  padding:
-    7px 12px;
-
-  border-radius:
-    20px;
-
-  background:
-    rgba(255,255,255,0.85);
-
-  color:
-    #1d3557;
-
-  font-size:
-    10px;
-
-  letter-spacing:
-    0.08em;
-
-  opacity: 0;
-
-  transform:
-    translateY(8px);
-
-  transition:
-    0.4s ease;
-}
-
-
-.gallery-item:hover figcaption {
-
-  opacity: 1;
-
-  transform:
-    translateY(0);
-}
-
-
-/* 큰 사진 */
-
-.gallery-large {
-
-  grid-row:
-    span 2;
-}
-
-
-/* 가로로 긴 사진 */
-
-.gallery-wide {
-
-  grid-column:
-    span 2;
-}
-
-
-/* ==========================================
-   GALLERY RESPONSIVE
-   ========================================== */
-
-@media (max-width: 850px) {
-
-  .gallery-grid {
-
-    grid-template-columns:
-      1fr;
-
-    grid-auto-rows:
-      260px;
-  }
-
-
-  .gallery-large,
-  .gallery-wide {
-
-    grid-row:
-      auto;
-
-    grid-column:
-      auto;
-  }
-
-
-  .gallery-detail-content {
-
-    padding:
-      25px 30px 50px;
-  }
-
-}
 /* ==========================================
    ABOUT - MAIN STYLE LOGO
    ========================================== */
@@ -3438,7 +2472,7 @@ body {
 }
 
 
-/* 왼쪽 메뉴 */
+/* �쇱そ 硫붾돱 */
 
 .about-detail-page .detail-mac-left {
 
@@ -3451,7 +2485,7 @@ body {
 }
 
 
-/* 기존 빨강/노랑/초록 점 완전 제거 */
+/* 湲곗〈 鍮④컯/�몃옉/珥덈줉 �� �꾩쟾 �쒓굅 */
 
 .about-detail-page .detail-mac-left > span {
 
@@ -3473,11 +2507,11 @@ body {
 }
 
 
-/* 간단한 Apple 스타일 아이콘 */
+/* 媛꾨떒�� Apple �ㅽ��� �꾩씠肄� */
 
 .about-detail-page .detail-apple-mark::before {
 
-  content: "●";
+  content: "��";
 
   position: absolute;
 
@@ -3535,7 +2569,7 @@ body {
 }
 
 
-/* 오른쪽 상태 */
+/* �ㅻⅨ履� �곹깭 */
 
 .about-detail-page .detail-mac-right {
 
@@ -3574,7 +2608,7 @@ body {
 }
 
 
-/* 배터리 */
+/* 諛고꽣由� */
 
 .about-detail-page .detail-battery-shell {
 
@@ -3638,7 +2672,7 @@ body {
 }
 
 
-/* About 안쪽 화면을 한 화면으로 고정 */
+/* About �덉そ �붾㈃�� �� �붾㈃�쇰줈 怨좎젙 */
 .about-detail-page .detail-frame {
   height: min(88vh, 760px);
   min-height: 600px;
@@ -3970,7 +3004,7 @@ body {
 }
 
 
-/* 진짜 닫기 버튼 */
+/* 吏꾩쭨 �リ린 踰꾪듉 */
 .about-detail-page .window-close {
   background: #ff5f57;
 
@@ -4102,7 +3136,7 @@ body {
 }
 
 
-/* 닫힐 때 */
+/* �ロ옄 �� */
 .about-detail-page .about-window.closing {
   opacity: 0;
 
@@ -4121,7 +3155,7 @@ body {
 }
 
 
-/* 빨간 버튼 */
+/* 鍮④컙 踰꾪듉 */
 .about-detail-page .window-close {
   position: relative;
 
@@ -4135,7 +3169,7 @@ body {
 }
 
 
-/* 마우스 올렸을 때 조금 강조 */
+/* 留덉슦�� �щ졇�� �� 議곌툑 媛뺤“ */
 .about-detail-page .window-close:hover {
   transform: scale(1.12);
 
@@ -4165,7 +3199,7 @@ body {
 }
 
 
-/* 실제 X 문자 */
+/* �ㅼ젣 X 臾몄옄 */
 .about-detail-page .close-x {
   display: block;
 
@@ -4188,7 +3222,7 @@ body {
 }
 
 
-/* 빨간 버튼에 마우스를 올리면 X */
+/* 鍮④컙 踰꾪듉�� 留덉슦�ㅻ� �щ━硫� X */
 .about-detail-page .window-close:hover .close-x {
   opacity: 1;
 }
@@ -4196,7 +3230,7 @@ body {
    MAC WINDOW BUTTONS - STRONG HOVER
    ========================================== */
 
-/* 버튼 영역 자체를 조금 넓게 */
+/* 踰꾪듉 �곸뿭 �먯껜瑜� 議곌툑 �볤쾶 */
 .about-detail-page .window-controls {
   display: flex;
   align-items: center;
@@ -4211,7 +3245,7 @@ body {
 }
 
 
-/* 각각의 동그라미를 조금 크게 */
+/* 媛곴컖�� �숆렇�쇰�瑜� 議곌툑 �ш쾶 */
 .about-detail-page .window-control {
   width: 12px;
   height: 12px;
@@ -4226,7 +3260,7 @@ body {
 }
 
 
-/* 빨간색 버튼 */
+/* 鍮④컙�� 踰꾪듉 */
 .about-detail-page .window-close {
   background: #ff5f57;
 
@@ -4268,9 +3302,9 @@ body {
 }
 
 
-/* 핵심:
-   빨간 점 하나가 아니라
-   세 버튼 영역에 마우스가 들어오면 X 표시 */
+/* �듭떖:
+   鍮④컙 �� �섎굹媛� �꾨땲��
+   �� 踰꾪듉 �곸뿭�� 留덉슦�ㅺ� �ㅼ뼱�ㅻ㈃ X �쒖떆 */
 .about-detail-page
 .window-controls:hover
 .window-close
@@ -4279,7 +3313,7 @@ body {
 }
 
 
-/* 빨간 버튼 위에 직접 올리면 더 강조 */
+/* 鍮④컙 踰꾪듉 �꾩뿉 吏곸젒 �щ━硫� �� 媛뺤“ */
 .about-detail-page .window-close:hover {
   transform: scale(1.12);
 
@@ -4311,7 +3345,7 @@ body {
 }
 
 
-/* 노란 버튼 */
+/* �몃� 踰꾪듉 */
 .about-detail-page .window-minimize {
   background: #febc2e;
 
@@ -4321,7 +3355,7 @@ body {
 }
 
 
-/* hover 시 - 표시 */
+/* hover �� - �쒖떆 */
 .about-detail-page .window-controls:hover
 .window-minimize::after {
 
@@ -4343,7 +3377,7 @@ body {
 }
 
 
-/* 최소화된 창 */
+/* 理쒖냼�붾맂 李� */
 .about-detail-page .about-window.minimized {
   height: 36px !important;
 
@@ -4355,7 +3389,7 @@ body {
 }
 
 
-/* 내용 숨기기 */
+/* �댁슜 �④린湲� */
 .about-detail-page
 .about-window.minimized
 .about-window-content {
@@ -4380,7 +3414,7 @@ body {
 }
 
 
-/* 컨트롤 영역 hover 시 + 표시 */
+/* 而⑦듃濡� �곸뿭 hover �� + �쒖떆 */
 .about-detail-page
 .window-controls:hover
 .window-maximize::before,
@@ -4421,7 +3455,7 @@ body {
 }
 
 
-/* 직접 hover했을 때 강조 */
+/* 吏곸젒 hover�덉쓣 �� 媛뺤“ */
 .about-detail-page .window-maximize:hover {
   transform: scale(1.12);
 
@@ -4433,7 +3467,7 @@ body {
 }
 
 
-/* 최대화 상태 */
+/* 理쒕��� �곹깭 */
 .about-detail-page .about-window.maximized {
   border-radius: 10px;
 
@@ -4443,7 +3477,7 @@ body {
 }
 
 
-/* 최대화된 창의 내용 여백 */
+/* 理쒕��붾맂 李쎌쓽 �댁슜 �щ갚 */
 .about-detail-page
 .about-window.maximized
 .about-window-content {
@@ -4455,7 +3489,7 @@ body {
    YELLOW / GREEN GLOW HOVER
    ========================================== */
 
-/* 노란색 버튼 */
+/* �몃��� 踰꾪듉 */
 .about-detail-page .window-minimize {
   transition:
     transform 0.18s ease,
@@ -4474,7 +3508,7 @@ body {
 }
 
 
-/* 초록색 버튼 */
+/* 珥덈줉�� 踰꾪듉 */
 .about-detail-page .window-maximize {
   transition:
     transform 0.18s ease,
@@ -4548,7 +3582,7 @@ body {
 }
 
 
-/* 화살표 */
+/* �붿궡�� */
 
 .about-detail-page .back-arrow {
   display: inline-flex;
@@ -4566,7 +3600,7 @@ body {
 }
 
 
-/* 글씨 */
+/* 湲��� */
 
 .about-detail-page .back-text {
   font-size: 8px;
@@ -4599,7 +3633,7 @@ body {
 }
 
 
-/* 화살표만 살짝 왼쪽으로 */
+/* �붿궡�쒕쭔 �댁쭩 �쇱そ�쇰줈 */
 .about-detail-page
 .back-to-story:hover
 .back-arrow {
@@ -4609,7 +3643,7 @@ body {
 }
 
 
-/* 클릭 순간 */
+/* �대┃ �쒓컙 */
 .about-detail-page .back-to-story:active {
   transform:
     translateY(0)
@@ -4620,7 +3654,7 @@ body {
    ================================================== */
 
 
-/* ---------- NAV 전체 ---------- */
+/* ---------- NAV �꾩껜 ---------- */
 
 .campus-detail-page .detail-nav {
   display: flex;
@@ -4692,7 +3726,7 @@ body {
 }
 
 
-/* ---------- 오른쪽 NAV ---------- */
+/* ---------- �ㅻⅨ履� NAV ---------- */
 
 .campus-detail-page .detail-nav nav {
   display: flex;
@@ -4727,7 +3761,7 @@ body {
 }
 
 
-/* 현재 Campus */
+/* �꾩옱 Campus */
 
 .campus-detail-page
 .detail-nav nav
@@ -4739,7 +3773,7 @@ body {
 }
 
 
-/* 작은 active indicator */
+/* �묒� active indicator */
 
 .campus-detail-page
 .detail-nav nav
@@ -4773,7 +3807,7 @@ body {
    CAMPUS HEADER - FINAL POSITION FIX
    ================================================== */
 
-/* macOS 메뉴바 */
+/* macOS 硫붾돱諛� */
 .campus-detail-page .detail-mac-bar {
   position: relative !important;
 
@@ -4802,7 +3836,7 @@ body {
 }
 
 
-/* H PORTFOLIO + 페이지 메뉴 영역 */
+/* H PORTFOLIO + �섏씠吏� 硫붾돱 �곸뿭 */
 .campus-detail-page .detail-nav {
   position: relative !important;
 
@@ -4883,7 +3917,7 @@ body {
 }
 
 
-/* 오른쪽 ABOUT / CAMPUS / FUTURE / GALLERY */
+/* �ㅻⅨ履� ABOUT / CAMPUS / FUTURE / GALLERY */
 .campus-detail-page .detail-nav nav {
   position: relative !important;
 
@@ -4928,7 +3962,7 @@ body {
 }
 
 
-/* 현재 페이지 */
+/* �꾩옱 �섏씠吏� */
 .campus-detail-page .detail-nav nav .active-nav {
   color: #111;
 
@@ -5020,7 +4054,7 @@ body {
    ================================================== */
 
 /* -----------------------------
-   Navigation 전체
+   Navigation �꾩껜
    ----------------------------- */
 
 .campus-detail-page .main-nav {
@@ -5173,7 +4207,7 @@ body {
 }
 
 
-/* 현재 Campus */
+/* �꾩옱 Campus */
 .campus-detail-page
 .main-nav nav a.active-nav,
 .campus-detail-page
@@ -5185,7 +4219,7 @@ body {
 }
 
 
-/* 현재 페이지 아래 작은 점 */
+/* �꾩옱 �섏씠吏� �꾨옒 �묒� �� */
 .campus-detail-page
 .main-nav nav a[href="Campus.html"]::after {
 
@@ -5265,9 +4299,3333 @@ body {
 }
 
 
-/* Finder만 아주 살짝 강조 */
+/* Finder留� �꾩＜ �댁쭩 媛뺤“ */
 .campus-detail-page .menu-text.finder {
   color: #111111 !important;
 
   font-weight: 700;
+}
+/* ==================================================
+   CAMPUS FINDER PAGE
+   ================================================== */
+/* ==================================================
+   CAMPUS FINDER PAGE
+   ================================================== */
+
+.campus-detail-page {
+  margin: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 26px 18px 44px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e1e3e5,
+      #f3f5f6
+    );
+}
+
+
+/* ==========================================
+   MAC FRAME
+   ========================================== */
+
+.campus-detail-page .detail-frame {
+
+  width: min(92vw, 1350px);
+
+  height: min(88vh, 760px);
+
+  min-height: 640px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4faf1,
+      #e4f1df,
+      #d1e8ca
+    );
+
+  border:
+    14px solid #111111;
+
+  border-radius:
+    22px;
+
+  box-shadow:
+    0 30px 70px
+    rgba(0,0,0,0.20);
+}
+
+
+/* ==========================================
+   TOP NAV
+   ========================================== */
+
+.campus-detail-page .main-nav {
+
+  width: 100%;
+
+  height: 72px;
+
+  padding: 0 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: transparent;
+}
+
+
+/* ==========================================
+   FINDER AREA
+   ========================================== */
+
+.campus-detail-page .campus-finder-page {
+
+  position: relative;
+
+  width: 100%;
+
+  height: calc(100% - 99px);
+
+  padding:
+    12px 52px 22px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* ==========================================
+   FINDER WINDOW
+   ========================================== */
+
+.campus-detail-page .campus-finder {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    180px minmax(0, 1fr);
+
+  overflow: hidden;
+
+  background:
+    rgba(249,249,250,0.97);
+
+  border:
+    1px solid
+    rgba(0,0,0,0.12);
+
+  border-radius:
+    14px;
+
+  box-shadow:
+    0 22px 50px
+    rgba(30,30,40,0.13);
+}
+
+
+/* ==========================================
+   SIDEBAR
+   ========================================== */
+
+.campus-detail-page .finder-sidebar {
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding:
+    24px 12px;
+
+  background:
+    rgba(231,231,235,0.90);
+
+  border-right:
+    1px solid
+    rgba(0,0,0,0.08);
+
+  min-width: 0;
+}
+
+
+.campus-detail-page .finder-sidebar-title {
+
+  margin:
+    5px 10px 13px;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.14em;
+
+  color:
+    #85818b;
+}
+
+
+.campus-detail-page .finder-item {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    9px 10px;
+
+  margin-bottom:
+    3px;
+
+  border:
+    none;
+
+  border-radius:
+    8px;
+
+  background:
+    transparent;
+
+  color:
+    #48444d;
+
+  font-size:
+    10px;
+
+  text-align:
+    left;
+
+  cursor:
+    pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.campus-detail-page
+.finder-item:hover {
+
+  background:
+    rgba(255,255,255,0.65);
+}
+
+
+.campus-detail-page
+.finder-item.active {
+
+  background:
+    rgba(255,255,255,0.90);
+
+  color:
+    #17151b;
+
+  font-weight:
+    700;
+}
+
+
+.campus-detail-page .finder-icon {
+
+  width:
+    22px;
+
+  font-size:
+    14px;
+
+  text-align:
+    center;
+}
+
+
+/* ==========================================
+   CONTENT
+   ========================================== */
+
+.campus-detail-page .finder-content {
+
+  min-width:
+    0;
+
+  padding:
+    34px 38px;
+
+  overflow:
+    hidden;
+}
+
+
+.campus-detail-page .finder-breadcrumb {
+
+  margin-bottom:
+    7px;
+
+  font-size:
+    8px;
+
+  color:
+    #96929b;
+}
+
+
+.campus-detail-page .finder-content h1 {
+
+  margin:
+    0 0 10px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    48px;
+
+  font-weight:
+    500;
+
+  line-height:
+    0.95;
+
+  color:
+    #183c22;
+}
+
+
+.campus-detail-page .finder-intro {
+
+  width:
+    460px;
+
+  max-width:
+    100%;
+
+  margin:
+    0 0 27px;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.7;
+
+  color:
+    #6d726f;
+
+  word-break:
+    keep-all;
+}
+
+
+/* ==========================================
+   FOLDER GRID
+   ========================================== */
+
+.campus-detail-page .finder-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2, minmax(180px, 1fr));
+
+  gap:
+    16px;
+}
+
+
+.campus-detail-page .folder-card {
+
+  width:
+    100%;
+
+  min-height:
+    130px;
+
+  padding:
+    20px;
+
+  border:
+    1px solid
+    rgba(40,65,48,0.10);
+
+  border-radius:
+    13px;
+
+  background:
+    rgba(231,242,227,0.72);
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  text-align:
+    left;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.campus-detail-page
+.folder-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  background:
+    rgba(236,246,232,0.96);
+
+  box-shadow:
+    0 12px 25px
+    rgba(35,60,40,0.10);
+}
+
+
+.campus-detail-page .folder-icon {
+
+  font-size:
+    34px;
+
+  line-height:
+    1;
+}
+
+
+.campus-detail-page .folder-name {
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    12px;
+
+  font-weight:
+    650;
+
+  color:
+    #294431;
+}
+
+
+/* ==========================================
+   BACK BUTTON
+   ========================================== */
+
+.campus-detail-page .campus-back-button {
+
+  position:
+    absolute;
+
+  left:
+    82px;
+
+  bottom:
+    28px;
+
+  padding:
+    8px 15px;
+
+  border:
+    1px solid
+    rgba(30,55,35,0.18);
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(255,255,255,0.58);
+
+  color:
+    #263a2b;
+
+  text-decoration:
+    none;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.10em;
+
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+
+.campus-detail-page
+.campus-back-button:hover {
+
+  transform:
+    translateY(-2px);
+
+  background:
+    rgba(255,255,255,0.90);
+
+  box-shadow:
+    0 8px 20px
+    rgba(30,50,35,0.08);
+}
+/* ==================================================
+   FUTURE PAGE - FINAL STABLE VERSION
+   Campus와 동일한 MacBook / Top Bar / Navigation
+   Calendar는 프레임 내부에서 정확히 고정
+   ================================================== */
+
+.future-detail-page {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 26px 18px 44px;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e1e3e5 0%,
+      #f3f5f6 100%
+    );
+}
+
+
+/* ==================================================
+   MACBOOK FRAME
+   ================================================== */
+
+.future-detail-page .detail-frame {
+  position: relative;
+
+  width: min(92vw, 1350px);
+  height: min(88vh, 760px);
+  min-height: 640px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  background: #f7f3ea;
+
+  border: 14px solid #111111;
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.20);
+
+  z-index: 1;
+}
+
+
+/* ==================================================
+   macOS TOP BAR
+   Campus와 동일
+   ================================================== */
+
+.future-detail-page .mac-bar {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 27px;
+
+  padding: 0 12px;
+  margin: 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e9ecef 0%,
+      #d9dde1 100%
+    );
+
+  border-bottom:
+    1px solid rgba(0,0,0,0.07);
+
+  z-index: 100;
+}
+
+
+/* ---------- LEFT ---------- */
+
+.future-detail-page .mac-left {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+
+  flex-shrink: 0;
+}
+
+
+/* Apple */
+
+.future-detail-page .apple-mark {
+  position: relative;
+
+  width: 9px;
+  height: 11px;
+
+  display: inline-block;
+
+  flex: 0 0 auto;
+
+  margin-right: 1px;
+
+  border-radius:
+    52% 48% 55% 48%;
+
+  background: #111111;
+
+  transform: scale(0.82);
+}
+
+.future-detail-page .apple-mark::after {
+  content: "";
+
+  position: absolute;
+
+  width: 3px;
+  height: 4px;
+
+  left: 5px;
+  top: -3px;
+
+  border-radius: 100% 0;
+
+  background: #111111;
+
+  transform: rotate(-35deg);
+}
+
+
+/* Finder / File / Edit / ... */
+
+.future-detail-page .menu-text {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  line-height: 1;
+  letter-spacing: 0;
+
+  color: #111111;
+}
+
+.future-detail-page .menu-text.finder {
+  font-weight: 700;
+}
+
+
+/* ---------- RIGHT ---------- */
+
+.future-detail-page .mac-right {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 7px;
+
+  margin: 0 0 0 auto;
+  padding: 0;
+
+  flex-shrink: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  line-height: 1;
+  letter-spacing: 0;
+
+  color: #222222;
+
+  white-space: nowrap;
+}
+
+.future-detail-page .status-item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 3px;
+
+  white-space: nowrap;
+}
+
+.future-detail-page .wifi {
+  font-size: 7px;
+}
+
+.future-detail-page .battery-shell {
+  position: relative;
+
+  width: 15px;
+  height: 7px;
+
+  display: inline-block;
+
+  border:
+    1px solid #555555;
+
+  border-radius: 2px;
+
+  box-sizing: border-box;
+}
+
+.future-detail-page .battery-shell::after {
+  content: "";
+
+  position: absolute;
+
+  right: -2px;
+  top: 1px;
+
+  width: 1px;
+  height: 3px;
+
+  background: #555555;
+}
+
+.future-detail-page .battery-level {
+  position: absolute;
+
+  left: 1px;
+  top: 1px;
+  bottom: 1px;
+
+  width: 72%;
+
+  background: #333333;
+
+  border-radius: 1px;
+}
+
+
+/* ==================================================
+   NAVIGATION
+   Campus와 동일한 좌우 기준
+   ================================================== */
+
+.future-detail-page .main-nav {
+  position: absolute !important;
+
+  top: 27px;
+  left: 0;
+
+  width: 100% !important;
+  height: 72px !important;
+
+  margin: 0 !important;
+  padding: 0 52px !important;
+
+  box-sizing: border-box;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  background: transparent;
+
+  z-index: 90;
+}
+
+
+/* ---------- H + PORTFOLIO ---------- */
+
+.future-detail-page .main-nav .logo {
+  position: static !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+  justify-content: center !important;
+
+  gap: 5px !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #111111 !important;
+
+  text-decoration: none !important;
+
+  line-height: 1 !important;
+}
+
+.future-detail-page .main-nav .logo-main {
+  display: block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 28px !important;
+
+  font-weight: 900 !important;
+
+  line-height: 0.8 !important;
+
+  letter-spacing: -0.05em !important;
+
+  color: #111111 !important;
+}
+
+.future-detail-page .main-nav .logo-sub {
+  display: block !important;
+
+  margin: 0 !important;
+  padding-left: 1px !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 7px !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 0.28em !important;
+
+  color: #111111 !important;
+}
+
+
+/* ---------- NAV LINKS ---------- */
+
+.future-detail-page .main-nav nav {
+  position: static !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 34px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.future-detail-page .main-nav nav a {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 650;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  color:
+    rgba(17,17,17,0.62);
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+.future-detail-page .main-nav nav a:hover {
+  color: #111111;
+}
+
+.future-detail-page .main-nav nav a.active-nav {
+  color: #111111;
+
+  font-weight: 800;
+}
+
+.future-detail-page
+.main-nav
+nav
+a.active-nav::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #111111;
+}
+
+
+/* ==================================================
+   FUTURE CALENDAR
+   Navigation 아래에서 시작
+   ================================================== */
+
+.future-detail-page .future-calendar {
+  position: absolute;
+
+  top: 99px;
+  left: 0;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 28px 52px 32px;
+
+  box-sizing: border-box;
+
+  color: #171717;
+
+  z-index: 10;
+}
+
+
+/* ==================================================
+   CALENDAR HEADER
+   ================================================== */
+
+.future-detail-page .future-calendar-header {
+
+  width: 100%;
+
+  margin: 0 0 28px;
+  padding: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+.future-detail-page .future-calendar-heading {
+  margin: 0;
+  padding: 0;
+
+  flex: 0 0 auto;
+}
+
+.future-detail-page .future-calendar-label {
+  display: block;
+
+  margin: 0 0 9px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  color: #8d4d36;
+}
+
+.future-detail-page
+.future-calendar-heading
+h1 {
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 48px;
+
+  line-height: 0.92;
+
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+
+  color: #963e22;
+}
+
+.future-detail-page .future-calendar-info {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 5px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  color:
+    rgba(80,45,35,0.65);
+}
+
+
+/* ==================================================
+   FOUR YEAR CARDS
+   ================================================== */
+
+.future-detail-page .future-year-section {
+
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 0 22px;
+  padding: 0;
+}
+
+.future-detail-page .future-year-line {
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 21px;
+
+  height: 1px;
+
+  background:
+    rgba(145,77,48,0.28);
+
+  z-index: 0;
+}
+
+.future-detail-page .future-year-list {
+
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+
+  z-index: 1;
+}
+
+.future-detail-page .future-year-card {
+
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  min-height: 105px;
+
+  margin: 0;
+  padding: 17px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(80,50,40,0.15);
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,0.45);
+
+  color: #171717;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.future-detail-page .future-year-card:hover {
+
+  transform:
+    translateY(-3px);
+
+  background:
+    rgba(255,255,255,0.75);
+
+  box-shadow:
+    0 10px 24px
+    rgba(90,50,30,0.08);
+}
+
+.future-detail-page .future-year-card.active {
+
+  background:
+    rgba(255,255,255,0.82);
+
+  border-color:
+    rgba(145,77,48,0.40);
+}
+
+.future-detail-page .future-year-number {
+
+  display: block;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  color: #a7654c;
+}
+
+.future-detail-page .future-year-title {
+
+  display: block;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: #7f351f;
+}
+
+.future-detail-page .future-year-arrow {
+
+  position: absolute;
+
+  right: 15px;
+  bottom: 14px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1;
+
+  color: #9a4b30;
+}
+
+
+/* ==================================================
+   GOAL MEMO
+   ================================================== */
+
+.future-detail-page .future-goal-panel {
+
+  position: relative;
+
+  display: none;
+
+  width: 100%;
+
+  min-height: 245px;
+
+  margin: 0 0 20px;
+
+  padding:
+    24px 28px 18px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(80,50,40,0.16);
+
+  border-radius: 16px;
+
+  background:
+    rgba(255,255,255,0.68);
+
+  box-shadow:
+    0 18px 38px
+    rgba(90,50,30,0.08);
+}
+
+.future-detail-page
+.future-goal-panel.visible {
+
+  display: block;
+
+  animation:
+    futureGoalIn
+    0.3s ease both;
+}
+
+@keyframes futureGoalIn {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(8px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* ---------- CLOSE ---------- */
+
+.future-detail-page .future-goal-close {
+
+  position: absolute;
+
+  top: 14px;
+  right: 16px;
+
+  width: 30px;
+  height: 30px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(50,40,35,0.22);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.60);
+
+  color: #6f4b40;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* ---------- MEMO HEADER ---------- */
+
+.future-detail-page .future-goal-top {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding-right: 44px;
+
+  margin: 0 0 18px;
+}
+
+.future-detail-page .future-goal-period {
+
+  display: block;
+
+  margin: 0 0 6px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  color: #9c624c;
+}
+
+.future-detail-page .future-goal-top h2 {
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 31px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: #80371f;
+}
+
+.future-detail-page .future-goal-label {
+
+  padding:
+    7px 10px;
+
+  border-radius:
+    20px;
+
+  background:
+    rgba(154,75,48,0.08);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  color: #8c4d37;
+}
+
+.future-detail-page .future-goal-content {
+
+  min-height:
+    110px;
+
+  max-width:
+    900px;
+
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.85;
+
+  color: #5f4a42;
+}
+
+.future-detail-page
+.future-goal-content
+p {
+
+  margin:
+    0 0 10px;
+}
+
+
+/* ---------- MEMO FOOTER ---------- */
+
+.future-detail-page .future-goal-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top:
+    13px;
+
+  margin-top:
+    10px;
+
+  border-top:
+    1px solid
+    rgba(80,50,40,0.12);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  color:
+    rgba(90,65,55,0.62);
+}
+
+
+/* ==================================================
+   BACK TO STORY
+   ================================================== */
+
+.future-detail-page .future-back-area {
+
+  width: 100%;
+
+  margin: 18px 0 0;
+
+  padding: 0;
+
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.future-detail-page .future-back-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 150px;
+
+  margin: 0;
+
+  padding:
+    10px 17px;
+
+  border:
+    1px solid #111111;
+
+  border-radius:
+    999px;
+
+  background:
+    transparent;
+
+  color:
+    #111111;
+
+  text-decoration:
+    none;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing:
+    0.10em;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 850px) {
+
+  .future-detail-page
+  .future-year-list {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+
+  .future-detail-page
+  .future-year-list {
+
+    grid-template-columns:
+      1fr;
+  }
+}
+/* ==========================================
+   FUTURE MAC BAR - CAMPUS MATCH
+   ========================================== */
+
+.future-detail-page .mac-left span {
+  color: #111111 !important;
+}
+
+/* Finder만 살짝 볼드 */
+.future-detail-page .mac-left .finder {
+  font-weight: 700 !important;
+}
+
+/* 나머지 메뉴는 일반 굵기 */
+.future-detail-page .mac-left .menu-text:not(.finder) {
+  font-weight: 400 !important;
+}
+/* ==================================================
+   GALLERY PAGE
+   CAMPUS / FUTURE FRAME + BAR MATCH
+   ================================================== */
+
+.gallery-detail-page {
+  margin: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 26px 18px 44px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e1e3e5,
+      #f3f5f6
+    );
+}
+
+
+/* ==========================================
+   SAME MACBOOK FRAME
+   ========================================== */
+
+.gallery-detail-page .detail-frame {
+
+  width:
+    min(92vw, 1350px);
+
+  height:
+    min(88vh, 760px);
+
+  min-height:
+    640px;
+
+  position:
+    relative;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background:
+    #f7f3ea;
+
+  border:
+    14px solid #111111;
+
+  border-radius:
+    22px;
+
+  box-shadow:
+    0 30px 70px
+    rgba(0,0,0,0.20);
+}
+
+
+/* ==========================================
+   MAC BAR
+   ========================================== */
+
+.gallery-detail-page .mac-bar {
+
+  width: 100%;
+
+  height: 27px;
+
+  margin: 0;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e9ecef 0%,
+      #d9dde1 100%
+    );
+
+  border-bottom:
+    1px solid
+    rgba(0,0,0,0.07);
+
+  z-index: 100;
+}
+
+
+.gallery-detail-page .mac-left {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+.gallery-detail-page .apple-mark {
+
+  width: 9px;
+
+  height: 11px;
+
+  display: inline-block;
+
+  flex: 0 0 auto;
+
+  margin-right: 1px;
+
+  border-radius:
+    52% 48% 55% 48%;
+
+  background:
+    #111111;
+}
+
+
+.gallery-detail-page .menu-text {
+
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color:
+    #111111;
+}
+
+
+.gallery-detail-page
+.menu-text.finder {
+
+  font-weight: 700;
+}
+
+
+/* 오른쪽 */
+
+.gallery-detail-page .mac-right {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 7px;
+
+  margin-left: auto;
+
+  white-space: nowrap;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  color:
+    #222222;
+}
+
+
+.gallery-detail-page .status-item {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 3px;
+
+  white-space: nowrap;
+}
+
+
+/* Battery */
+
+.gallery-detail-page .battery-shell {
+
+  position: relative;
+
+  width: 15px;
+  height: 7px;
+
+  display: inline-block;
+
+  border:
+    1px solid #555555;
+
+  border-radius:
+    2px;
+
+  box-sizing: border-box;
+}
+
+
+.gallery-detail-page .battery-shell::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -2px;
+  top: 1px;
+
+  width: 1px;
+  height: 3px;
+
+  background:
+    #555555;
+}
+
+
+.gallery-detail-page .battery-level {
+
+  position: absolute;
+
+  left: 1px;
+  top: 1px;
+  bottom: 1px;
+
+  width: 72%;
+
+  background:
+    #333333;
+
+  border-radius: 1px;
+}
+
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+.gallery-detail-page .main-nav {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 72px;
+
+  margin: 0;
+
+  padding: 0 52px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background:
+    transparent;
+
+  z-index: 50;
+}
+
+
+/* H */
+
+.gallery-detail-page .main-nav .logo {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  margin: 0;
+
+  padding: 0;
+
+  width: auto;
+  height: auto;
+
+  color:
+    #111111;
+
+  text-decoration:
+    none;
+}
+
+
+.gallery-detail-page .logo-main {
+
+  display: block;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 28px;
+
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  letter-spacing:
+    -0.05em;
+
+  color:
+    #111111;
+}
+
+
+.gallery-detail-page .logo-sub {
+
+  display: block;
+
+  margin: 0;
+
+  padding-left: 1px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing:
+    0.28em;
+
+  color:
+    #111111;
+}
+
+
+/* Navigation links */
+
+.gallery-detail-page .main-nav nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 34px;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.gallery-detail-page .main-nav nav a {
+
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 650;
+
+  line-height: 1;
+
+  letter-spacing:
+    0.10em;
+
+  color:
+    rgba(17,17,17,0.62);
+
+  text-decoration:
+    none;
+
+  white-space:
+    nowrap;
+}
+
+
+.gallery-detail-page
+.main-nav
+nav
+a.active-nav {
+
+  color:
+    #111111;
+
+  font-weight:
+    800;
+}
+
+
+/* Gallery 아래 점 */
+
+.gallery-detail-page
+.main-nav
+nav
+a.active-nav::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    50%;
+
+  background:
+    #111111;
+}
+
+
+/* ==========================================
+   GALLERY CONTENT
+   사진은 현재 전부 삭제했으므로
+   Intro만 유지
+   ========================================== */
+
+/* ==========================================
+   GALLERY CONTENT - POSITION FIX
+   ========================================== */
+
+.gallery-detail-page
+.gallery-detail-content {
+
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    40px 52px 34px;
+
+  box-sizing: border-box;
+
+  z-index: 5;
+}
+
+.gallery-detail-page
+.gallery-intro {
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+
+  justify-content: flex-start;
+
+}
+
+.gallery-detail-page
+.gallery-intro-text {
+
+  width: 100%;
+
+  max-width: 760px;
+
+  margin: 0;
+
+  padding: 0;
+
+  display: block;
+}
+
+
+
+.gallery-detail-page
+.detail-number {
+
+  display: block;
+
+  margin:
+    0 0 14px;
+
+  padding: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  line-height:
+    1;
+
+  color:
+    #111111;
+}
+
+
+.gallery-detail-page
+.gallery-intro h1 {
+
+  display: block;
+
+  margin: 0;
+
+  padding: 0;
+
+  width: auto;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(58px, 6vw, 88px);
+
+  line-height:
+    0.86;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    -0.045em;
+
+  color:
+    #111111;
+
+  position: static;
+
+  transform: none;
+}
+
+
+
+
+
+/* Back */
+
+.gallery-detail-page
+.back-area {
+
+  width: 100%;
+
+  margin:
+    45px 0 0;
+
+  padding: 0;
+
+  display: flex;
+
+  justify-content:
+    flex-end;
+}
+
+
+.gallery-detail-page
+.back-btn {
+
+  display: inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  min-width:
+    150px;
+
+  padding:
+    10px 17px;
+
+  border:
+    1px solid #111111;
+
+  border-radius:
+    999px;
+
+  background:
+    transparent;
+
+  color:
+    #111111;
+
+  text-decoration:
+    none;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    8px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.10em;
+}
+/* ==================================================
+   GALLERY HEADER
+   CAMPUS / FUTURE EXACT MATCH
+   ================================================== */
+
+
+/* ---------- OUTER FRAME ---------- */
+
+body.gallery-detail-page {
+  margin: 0 !important;
+
+  min-height: 100vh !important;
+
+  display: flex !important;
+
+  justify-content: center !important;
+  align-items: center !important;
+
+  padding: 26px 18px 44px !important;
+
+  box-sizing: border-box !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e1e3e5 0%,
+      #f3f5f6 100%
+    ) !important;
+}
+
+
+body.gallery-detail-page .detail-frame {
+
+  width:
+    min(92vw, 1350px) !important;
+
+  height:
+    min(88vh, 760px) !important;
+
+  min-height:
+    640px !important;
+
+  position:
+    relative !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  box-sizing:
+    border-box !important;
+
+  overflow:
+    hidden !important;
+
+  background:
+    #f7f3ea !important;
+
+  border:
+    14px solid #111111 !important;
+
+  border-radius:
+    22px !important;
+
+  box-shadow:
+    0 30px 70px
+    rgba(0,0,0,0.20) !important;
+}
+
+
+/* ==================================================
+   macOS TOP BAR
+   ================================================== */
+
+body.gallery-detail-page .mac-bar {
+
+  position:
+    absolute !important;
+
+  top:
+    0 !important;
+
+  left:
+    0 !important;
+
+  width:
+    100% !important;
+
+  height:
+    27px !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 12px !important;
+
+  display:
+    flex !important;
+
+  align-items:
+    center !important;
+
+  justify-content:
+    space-between !important;
+
+  box-sizing:
+    border-box !important;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e9ecef 0%,
+      #d9dde1 100%
+    ) !important;
+
+  border-bottom:
+    1px solid
+    rgba(0,0,0,0.07) !important;
+
+  z-index:
+    100 !important;
+}
+
+
+/* ---------- LEFT MENU ---------- */
+
+body.gallery-detail-page .mac-left {
+
+  display:
+    flex !important;
+
+  align-items:
+    center !important;
+
+  gap:
+    8px !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+}
+
+
+body.gallery-detail-page .apple-mark {
+
+  width:
+    9px !important;
+
+  height:
+    11px !important;
+
+  display:
+    inline-block !important;
+
+  flex:
+    0 0 auto !important;
+
+  margin-right:
+    1px !important;
+
+  background:
+    #111111 !important;
+
+  border-radius:
+    52% 48% 55% 48% !important;
+
+  color:
+    #111111 !important;
+}
+
+
+body.gallery-detail-page .menu-text {
+
+  display:
+    inline-block !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size:
+    8px !important;
+
+  font-weight:
+    400 !important;
+
+  line-height:
+    1 !important;
+
+  letter-spacing:
+    0 !important;
+
+  color:
+    #111111 !important;
+}
+
+
+/* Finder만 Bold */
+
+body.gallery-detail-page
+.mac-left
+.menu-text.finder {
+
+  font-weight:
+    700 !important;
+
+  color:
+    #111111 !important;
+}
+
+
+/* 혹시 전역 nth-child 색상이 덮어써도 전부 검정 */
+
+body.gallery-detail-page
+.mac-left
+span:nth-child(1),
+body.gallery-detail-page
+.mac-left
+span:nth-child(2),
+body.gallery-detail-page
+.mac-left
+span:nth-child(3) {
+
+  color:
+    #111111 !important;
+}
+
+
+/* ---------- RIGHT STATUS ---------- */
+
+body.gallery-detail-page .mac-right {
+
+  position:
+    absolute !important;
+
+  top:
+    0 !important;
+
+  right:
+    12px !important;
+
+  height:
+    27px !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  display:
+    flex !important;
+
+  align-items:
+    center !important;
+
+  justify-content:
+    flex-end !important;
+
+  gap:
+    7px !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size:
+    7px !important;
+
+  font-weight:
+    500 !important;
+
+  line-height:
+    1 !important;
+
+  color:
+    #222222 !important;
+
+  white-space:
+    nowrap !important;
+}
+
+
+body.gallery-detail-page .status-item {
+
+  display:
+    inline-flex !important;
+
+  align-items:
+    center !important;
+
+  gap:
+    3px !important;
+
+  white-space:
+    nowrap !important;
+}
+
+
+/* ---------- BATTERY ---------- */
+
+body.gallery-detail-page .battery-shell {
+
+  position:
+    relative !important;
+
+  width:
+    15px !important;
+
+  height:
+    7px !important;
+
+  display:
+    inline-block !important;
+
+  border:
+    1px solid #555555 !important;
+
+  border-radius:
+    2px !important;
+
+  box-sizing:
+    border-box !important;
+}
+
+
+body.gallery-detail-page
+.battery-shell::after {
+
+  content:
+    "" !important;
+
+  position:
+    absolute !important;
+
+  right:
+    -2px !important;
+
+  top:
+    1px !important;
+
+  width:
+    1px !important;
+
+  height:
+    3px !important;
+
+  background:
+    #555555 !important;
+}
+
+
+body.gallery-detail-page .battery-level {
+
+  position:
+    absolute !important;
+
+  left:
+    1px !important;
+
+  top:
+    1px !important;
+
+  bottom:
+    1px !important;
+
+  width:
+    72% !important;
+
+  background:
+    #333333 !important;
+
+  border-radius:
+    1px !important;
+}
+
+
+/* ==================================================
+   NAVIGATION
+   Future에서 맞춘 것과 동일
+   ================================================== */
+
+body.gallery-detail-page .main-nav {
+
+  position:
+    absolute !important;
+
+  top:
+    27px !important;
+
+  left:
+    0 !important;
+
+  width:
+    100% !important;
+
+  height:
+    72px !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 52px !important;
+
+  display:
+    flex !important;
+
+  align-items:
+    center !important;
+
+  justify-content:
+    space-between !important;
+
+  box-sizing:
+    border-box !important;
+
+  background:
+    transparent !important;
+
+  z-index:
+    90 !important;
+}
+
+
+/* ---------- H LOGO ---------- */
+
+body.gallery-detail-page
+.main-nav
+.logo {
+
+  position:
+    static !important;
+
+  left:
+    auto !important;
+
+  top:
+    auto !important;
+
+  transform:
+    none !important;
+
+  display:
+    flex !important;
+
+  flex-direction:
+    column !important;
+
+  align-items:
+    flex-start !important;
+
+  justify-content:
+    center !important;
+
+  gap:
+    5px !important;
+
+  width:
+    auto !important;
+
+  height:
+    auto !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  flex:
+    0 0 auto !important;
+
+  color:
+    #111111 !important;
+
+  text-decoration:
+    none !important;
+
+  line-height:
+    1 !important;
+}
+
+
+body.gallery-detail-page
+.main-nav
+.logo-main {
+
+  display:
+    block !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size:
+    28px !important;
+
+  font-weight:
+    900 !important;
+
+  line-height:
+    0.8 !important;
+
+  letter-spacing:
+    -0.05em !important;
+
+  color:
+    #111111 !important;
+}
+
+
+body.gallery-detail-page
+.main-nav
+.logo-sub {
+
+  display:
+    block !important;
+
+  margin:
+    0 !important;
+
+  padding-left:
+    1px !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size:
+    7px !important;
+
+  font-weight:
+    700 !important;
+
+  line-height:
+    1 !important;
+
+  letter-spacing:
+    0.28em !important;
+
+  color:
+    #111111 !important;
+}
+
+
+/* ---------- NAV LINKS ---------- */
+
+body.gallery-detail-page
+.main-nav
+nav {
+
+  display:
+    flex !important;
+
+  align-items:
+    center !important;
+
+  gap:
+    34px !important;
+
+  margin:
+    0 0 0 auto !important;
+
+  padding:
+    0 !important;
+
+  flex:
+    0 0 auto !important;
+}
+
+
+body.gallery-detail-page
+.main-nav
+nav
+a {
+
+  position:
+    relative !important;
+
+  display:
+    inline-block !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size:
+    10px !important;
+
+  font-weight:
+    650 !important;
+
+  line-height:
+    1 !important;
+
+  letter-spacing:
+    0.10em !important;
+
+  color:
+    rgba(17,17,17,0.62) !important;
+
+  text-decoration:
+    none !important;
+
+  white-space:
+    nowrap !important;
+}
+
+
+body.gallery-detail-page
+.main-nav
+nav
+a.active-nav {
+
+  color:
+    #111111 !important;
+
+  font-weight:
+    800 !important;
+}
+
+
+/* GALLERY 밑의 active dot */
+
+body.gallery-detail-page
+.main-nav
+nav
+a.active-nav::after {
+
+  content:
+    "" !important;
+
+  position:
+    absolute !important;
+
+  left:
+    50% !important;
+
+  bottom:
+    -9px !important;
+
+  width:
+    4px !important;
+
+  height:
+    4px !important;
+
+  transform:
+    translateX(-50%) !important;
+
+  border-radius:
+    50% !important;
+
+  background:
+    #111111 !important;
+}
+/* ==================================================
+   GALLERY CONTENT - FINAL POSITION FIX
+   ================================================== */
+
+body.gallery-detail-page .gallery-detail-content {
+
+  position: absolute !important;
+
+  top: 99px !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  margin: 0 !important;
+
+  padding: 38px 52px 30px !important;
+
+  box-sizing: border-box !important;
+
+  z-index: 5 !important;
+}
+
+
+/* ------------------------------------------
+   INTRO
+   ------------------------------------------ */
+
+body.gallery-detail-page .gallery-intro {
+
+  width: 100% !important;
+
+  max-width: none !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  display: block !important;
+}
+
+
+body.gallery-detail-page .gallery-intro-text {
+
+  width: 100% !important;
+
+  max-width: 760px !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  display: block !important;
+}
+
+
+/* ------------------------------------------
+   NUMBER
+   ------------------------------------------ */
+
+body.gallery-detail-page .gallery-intro-text .detail-number {
+
+  display: block !important;
+
+  margin: 0 0 14px !important;
+
+  padding: 0 !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 12px !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1 !important;
+
+  color: #111111 !important;
+}
+
+
+/* ------------------------------------------
+   TITLE
+   ------------------------------------------ */
+
+body.gallery-detail-page .gallery-intro-text h1 {
+
+  display: block !important;
+
+  position: static !important;
+
+  left: auto !important;
+  top: auto !important;
+
+  transform: none !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size:
+    clamp(64px, 6vw, 88px) !important;
+
+  line-height: 0.86 !important;
+
+  font-weight: 500 !important;
+
+  letter-spacing: -0.045em !important;
+
+  color: #111111 !important;
+}
+
+
+/* ------------------------------------------
+   DESCRIPTION
+   ------------------------------------------ */
+
+body.gallery-detail-page .gallery-description {
+
+  display: block !important;
+
+  width: 100% !important;
+
+  max-width: 620px !important;
+
+  margin: 28px 0 0 !important;
+
+  padding: 0 !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 15px !important;
+
+  line-height: 1.8 !important;
+
+  color: rgba(17,17,17,0.68) !important;
+
+  word-break: keep-all !important;
+}
+
+
+/* ------------------------------------------
+   BACK BUTTON
+   ------------------------------------------ */
+
+body.gallery-detail-page .back-area {
+
+  position: absolute !important;
+
+  left: 52px !important;
+
+  bottom: 28px !important;
+
+  right: auto !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  display: block !important;
+}
+
+
+body.gallery-detail-page .back-btn {
+
+  display: inline-flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  min-width: 150px !important;
+
+  margin: 0 !important;
+
+  padding: 10px 17px !important;
+
+  border: 1px solid #111111 !important;
+
+  border-radius: 999px !important;
+
+  background: transparent !important;
+
+  color: #111111 !important;
+
+  text-decoration: none !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 8px !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 0.10em !important;
+}
+/* ==========================================
+   GALLERY BACK BUTTON - LEFT BOTTOM
+   ========================================== */
+
+body.gallery-detail-page .back-area {
+
+  position: absolute !important;
+
+  top: auto !important;
+  right: auto !important;
+
+  left: 52px !important;
+  bottom: 28px !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+
+  z-index: 100 !important;
+}
+
+
+body.gallery-detail-page .back-btn {
+
+  position: static !important;
+
+  display: inline-flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  min-width: 150px !important;
+
+  margin: 0 !important;
+  padding: 10px 17px !important;
+
+  border:
+    1px solid #111111 !important;
+
+  border-radius:
+    999px !important;
+
+  background:
+    transparent !important;
+
+  color:
+    #111111 !important;
+
+  text-decoration:
+    none !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size:
+    8px !important;
+
+  font-weight:
+    700 !important;
+
+  line-height:
+    1 !important;
+
+  letter-spacing:
+    0.10em !important;
+}
+/* ==========================================
+   GALLERY PHOTO GRID
+   ========================================== */
+
+body.gallery-detail-page .gallery-grid {
+
+  width: 100%;
+
+  margin: 55px 0 0;
+
+  padding: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+}
+
+
+/* 사진 카드 */
+
+body.gallery-detail-page .gallery-item {
+
+  margin: 0;
+
+  padding: 0;
+
+  min-width: 0;
+}
+
+
+/* 사진 */
+
+body.gallery-detail-page
+.gallery-item img {
+
+  display: block;
+
+  width: 100%;
+
+  height: 170px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+
+
+/* 사진 설명 */
+
+body.gallery-detail-page
+.gallery-item figcaption {
+
+  margin-top: 9px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.10em;
+
+  color:
+    rgba(17,17,17,0.65);
+}
+/* 1번 얼굴 보이도록 조정한 거임*/
+body.gallery-detail-page
+.gallery-me img {
+  object-position: center 32%;
 }
